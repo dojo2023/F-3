@@ -1,0 +1,14 @@
+このパッケージには
+LoginServlet.java, MenuServlet.java, PaymentServlet.java, DrinkRegistServlet.java
+DrinkRecodeServlet.java, FrinedsRecodeServlet.java, EditServlet.java., SignUpServlet.java,
+を追加してください
+
+- 各ファイルの担当者 -
+LoginServlet.java         : 朝倉
+MenuServlet.java          : 中村
+PaymentServlet.java       : 中村・原山
+DrinkRegistServlet.java   : 原山
+DrinkRecodeServlet.java   : 田中
+FrinedsRecodeServlet.java : 朝倉
+EditServlet.java          : 高知尾
+SignUpServlet.java        : 高知尾

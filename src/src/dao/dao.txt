@@ -1,0 +1,9 @@
+このパッケージには
+UserDao.java, DrinkDao.java, FriendsDao.java, RouletteDao.java
+を追加してください
+
+- 各ファイルの担当者 -
+UserDao.java     : 高知尾
+DrinkDao.java    : 原山
+FriendsDao.java  : 中村
+RouletteDao.java : 中村

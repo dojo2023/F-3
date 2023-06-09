@@ -1,0 +1,16 @@
+このパッケージには
+common.js, login.css, menu.css, payment.css, drinkRegist.css
+drinkRecode.css, frinedsRecode.css, edit.css., signUp.css
+を追加してください
+
+- 各ファイルの担当者 -
+common.js        : 原山
+login.js         : 朝倉
+menu.js          : 中村
+payment.js       : 中村・原山
+drinkRegist.js   : 原山
+drinkRecode.js   : 田中
+frinedsRecode.js : 朝倉
+edit.js          : 高知尾
+signUp.js        : 高知尾
+

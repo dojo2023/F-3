@@ -1,0 +1,15 @@
+このパッケージには
+login.css, menu.css, payment.css, drinkRegist.css
+drinkRecode.css, frinedsRecode.css, edit.css., signUp.css
+を追加してください
+
+- 各ファイルの担当者 -
+login.css         : 朝倉
+menu.css          : 中村
+payment.css       : 中村・原山
+drinkRegist.css   : 原山
+drinkRecode.css   : 田中
+frinedsRecode.css : 朝倉
+edit.css          : 高知尾
+signUp.css        : 高知尾
+
