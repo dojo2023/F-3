@@ -8,8 +8,8 @@ login.jsp         : 朝倉
 menu.jsp          : 中村
 payment.jsp       : 中村・原山
 drinkRegist.jsp   : 原山
-drinkRecode.jsp   : 田中
-frinedsRecode.jsp : 朝倉
+drinkRecord.jsp   : 田中
+frinedsRecord.jsp : 朝倉
 edit.jsp          : 高知尾
 signUp.jsp        : 高知尾
 

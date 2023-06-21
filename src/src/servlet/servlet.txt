@@ -8,7 +8,7 @@ LoginServlet.java         : 朝倉
 MenuServlet.java          : 中村
 PaymentServlet.java       : 中村・原山
 DrinkRegistServlet.java   : 原山
-DrinkRecodeServlet.java   : 田中
-FrinedsRecodeServlet.java : 朝倉
+DrinkRecordServlet.java   : 田中
+FrinedsRecordServlet.java : 朝倉
 EditServlet.java          : 高知尾
 SignUpServlet.java        : 高知尾

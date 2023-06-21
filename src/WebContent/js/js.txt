@@ -9,8 +9,8 @@ login.js         : 朝倉
 menu.js          : 中村
 payment.js       : 中村・原山
 drinkRegist.js   : 原山
-drinkRecode.js   : 田中
-frinedsRecode.js : 朝倉
+drinkRecord.js   : 田中
+frinedsRecord.js : 朝倉
 edit.js          : 高知尾
 signUp.js        : 高知尾
 

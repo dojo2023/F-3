@@ -1,0 +1,852 @@
+2023-06-20 14:54:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL PRIMARY KEY,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-20 14:54:39 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL PRIMARY KEY,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-20 14:54:57 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-20 14:55:07 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:16:52 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(, """")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(, "") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ようこ, 4, ""/nomikai/img/icon/icon7.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ようこ, 4, ""/nomikai/img/icon/icon7.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(ようこ, 4, "/nomikai/img/icon/icon7.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(大原, 4, ""/nomikai/img/icon/icon12.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(大原, 4, ""/nomikai/img/icon/icon12.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(大原, 4, "/nomikai/img/icon/icon12.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(タモリ, 1, ""/nomikai/img/icon/icon6.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(タモリ, 1, ""/nomikai/img/icon/icon6.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(タモリ, 1, "/nomikai/img/icon/icon6.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ナオヤ, 4, ""/nomikai/img/icon/icon2.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ナオヤ, 4, ""/nomikai/img/icon/icon2.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(ナオヤ, 4, "/nomikai/img/icon/icon2.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(香澄, 10, ""/nomikai/img/icon/icon3.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(香澄, 10, ""/nomikai/img/icon/icon3.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(香澄, 10, "/nomikai/img/icon/icon3.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(響, 5, ""/nomikai/img/icon/icon1.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(響, 5, ""/nomikai/img/icon/icon1.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(響, 5, "/nomikai/img/icon/icon1.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ぽたぽた, 10, ""/nomikai/img/icon/icon9.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(ぽたぽた, 10, ""/nomikai/img/icon/icon9.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(ぽたぽた, 10, "/nomikai/img/icon/icon9.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(れん, 4, ""/nomikai/img/icon/icon5.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(れん, 4, ""/nomikai/img/icon/icon5.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(れん, 4, "/nomikai/img/icon/icon5.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(みかん, 2, ""/nomikai/img/icon/icon13.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]NAME, VISITTIMES, AVATOR) VALUES(みかん, 2, ""/nomikai/img/icon/icon13.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (name, visitTimes, avator) VALUES(みかん, 2, "/nomikai/img/icon/icon13.png") [42001-200]
+2023-06-20 16:21:17 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(寅さん, 1, ""/nomikai/img/icon/icon8.png"")"; 期待されるステートメント "identifier"
+Syntax error in SQL statement "INSERT INTO ([*]VISITTIMES, AVATOR) VALUES(寅さん, 1, ""/nomikai/img/icon/icon8.png"")"; expected "identifier"; SQL statement:
+INSERT INTO (visitTimes, avator) VALUES(寅さん, 1, "/nomikai/img/icon/icon8.png") [42001-200]
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ようこ, 4, "/nomikai/img/icon/icon7.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(大原, 4, "/nomikai/img/icon/icon12.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(タモリ, 1, "/nomikai/img/icon/icon6.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ナオヤ, 4, "/nomikai/img/icon/icon2.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(香澄, 10, "/nomikai/img/icon/icon3.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(響, 5, "/nomikai/img/icon/icon1.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ぽたぽた, 10, "/nomikai/img/icon/icon9.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(れん, 4, "/nomikai/img/icon/icon5.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(みかん, 2, "/nomikai/img/icon/icon13.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:22:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "AVATOR" が見つかりません
+Column "AVATOR" not found; SQL statement:
+INSERT INTO friends (visitTimes, avator) VALUES(寅さん, 1, "/nomikai/img/icon/icon8.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.table.Table.getColumn(Table.java:703)
+	at org.h2.command.Parser.parseColumn(Parser.java:1450)
+	at org.h2.command.Parser.parseColumnList(Parser.java:1435)
+	at org.h2.command.Parser.parseInsertGivenTable(Parser.java:1804)
+	at org.h2.command.Parser.parseInsert(Parser.java:1749)
+	at org.h2.command.Parser.parsePrepared(Parser.java:954)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:23:15 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "NOT"
+Unknown data type: "NOT"; SQL statement:
+CREATE TABLE friends(
+  numberint NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name varchar(30) NOT NULL,
+  visitTimes int NOT NULL,
+  avatar varchar(255) NOT NULL
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:23:31 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "NOT"
+Unknown data type: "NOT"; SQL statement:
+CREATE TABLE friends(
+  numberint NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name varchar(30) NOT NULL,
+  visitTimes int NOT NULL,
+  avator varchar(255) NOT NULL
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ようこ" が見つかりません
+Column "ようこ" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ようこ, 4, "/nomikai/img/icon/icon7.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "大原" が見つかりません
+Column "大原" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(大原, 4, "/nomikai/img/icon/icon12.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "タモリ" が見つかりません
+Column "タモリ" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(タモリ, 1, "/nomikai/img/icon/icon6.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ナオヤ" が見つかりません
+Column "ナオヤ" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ナオヤ, 4, "/nomikai/img/icon/icon2.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "香澄" が見つかりません
+Column "香澄" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(香澄, 10, "/nomikai/img/icon/icon3.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "響" が見つかりません
+Column "響" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(響, 5, "/nomikai/img/icon/icon1.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ぽたぽた" が見つかりません
+Column "ぽたぽた" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(ぽたぽた, 10, "/nomikai/img/icon/icon9.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "れん" が見つかりません
+Column "れん" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(れん, 4, "/nomikai/img/icon/icon5.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "みかん" が見つかりません
+Column "みかん" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES(みかん, 2, "/nomikai/img/icon/icon13.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:16 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO friends (visitTimes, avator) VALUES(寅さん, 1, "/nomikai/img/icon/icon8.png") [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:50 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "ようこ" が見つかりません
+Column "ようこ" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES("ようこ", 4, "/nomikai/img/icon/icon7.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:24:58 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "/nomikai/img/icon/icon7.png" が見つかりません
+Column "/nomikai/img/icon/icon7.png" not found; SQL statement:
+INSERT INTO friends (name, visitTimes, avator) VALUES('ようこ', 4, "/nomikai/img/icon/icon7.png") [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.command.dml.Insert.prepare(Insert.java:327)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:27:02 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO friends (visitTimes, avator) VALUES('寅さん', 1, '/nomikai/img/icon/icon8.png') [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-20 16:28:34 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "SELECT * FROMUSERINFO[*]"
+Syntax error in SQL statement "SELECT * FROMUSERINFO[*]"; SQL statement:
+SELECT * FROMUSERINFO [42000-200]

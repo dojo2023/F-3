@@ -1,0 +1,106 @@
+@charset "UTF-8";
+ .fonts {
+            font-family: "HGP行書体";
+        }
+
+        @media (min-width: 626px) {
+            .img-wide {
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+                top: -3vh;
+                z-index: -1;
+            }
+
+            .char-style {
+                writing-mode: vertical-rl;
+                font-size: 45px;
+                margin: 5% 10%;
+                margin-top: 32%;
+                margin-bottom: 0;
+                background-color: transparent;
+                border: none;
+            }
+
+            .img-min,
+            .img-small {
+                display: none;
+            }
+        }
+
+        @media ((max-width: 625px) and (min-width: 400px)) {
+            .img-min {
+                height: 100vh;
+                width: 100vw;
+                position: relative;
+                top: -3vh;
+                z-index: -1;
+            }
+
+            .char-style {
+                writing-mode: vertical-rl;
+                font-size: 45px;
+                margin: 5% 10%;
+                margin-top: 32%;
+                margin-bottom: 0;
+                background-color: transparent;
+                border: none;
+            }
+
+            .img-wide,
+            .img-small {
+                display: none;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .img-small {
+                height: 100vh;
+                width: 120vw;
+                position: relative;
+                z-index: -1;
+                /* bottom: 0; */
+            }
+
+            .img-min,
+            .img-wide {
+                display: none;
+            }
+
+            .char-style {
+                writing-mode: vertical-rl;
+                font-size: 45px;
+                margin: 5% 10%;
+                margin-top: 45%;
+                background-color: transparent;
+                border: none;
+            }
+        }
+
+        .payment-box {
+            height: 500px;
+            width: 500px;
+            margin: auto;
+            text-align: center;
+            position: relative;
+            top: -100vh;
+            /* display: inline-block; */
+        }
+
+        .payment-box span {
+            font-family: "HGP行書体";
+            font-size: 25px;
+        }
+
+        .input-style {
+            border: none;
+            outline: none;
+            background-color: transparent;
+            /* 入力欄の背景色を透過 */
+            text-align: center;
+            margin: 10px 0;
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            font-size: 25px;
+            max-width: 150px;
+        }
