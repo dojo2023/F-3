@@ -1,0 +1,460 @@
+@charset "UTF-8";
+	body {
+	font-family:"メイリオ";
+	background-image: url("/nomikai/img/backImage/menu_block.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+
+	.head {
+		padding: 0 10px 10px 10px;
+		background: firebrick;
+	}
+
+	#logoImg {
+		margin: 15px auto auto 20px;
+	}
+
+	.logout {
+		font-size: 15px;
+		font-weight: bold;
+		vertical-align: 25%;
+		color: white;
+		background: linear-gradient(slateray, silver);
+		background: -moz-linear-gradient(slategray, silver);
+		background: -webkit-linear-gradient(slategray, silver);
+		border: 2px solid white;
+		border-radius: 5px;
+		padding: 15px 35px 15px 35px;
+		margin: 0 0 0 100px;
+	}
+
+	.logout:link {
+		text-decoration: none;
+		color: white;
+	}
+	.logout:visited {
+		text-decoration: none;
+		color: white;
+	}
+	.logout:hover {
+		text-decoration: none;
+		color: white;
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+	}
+	.logout:active {
+		text-decoration: none;
+		color: white;
+	}
+
+	.pay {
+		font-size: 45px;
+		font-weight: bold;
+		vertical-align: 25%;
+		color: white;
+		background: linear-gradient(cornflowerblue, lightskyblue);
+		background: -moz-linear-gradient(cornflowerblue, lightskyblue);
+		background: -webkit-linear-gradient(cornflowerblue, lightskyblue);
+		border: 2px solid white;
+		border-radius: 5px;
+		padding: 15px 35px 15px 35px;
+		margin: 0 0 0 400px;
+	}
+
+	.pay:link {
+		text-decoration: none;
+		color: white;
+	}
+	.pay:visited {
+		text-decoration: none;
+		color: white;
+	}
+	.pay:hover {
+		text-decoration: none;
+		color: white;
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+	}
+	.pay:active {
+		text-decoration: none;
+		color: white;
+	}
+	.menuWrapper {
+		border-collapse: collapse;
+		margin: 40px auto auto auto;
+
+	}
+
+	#button1 {
+		margin:2px 2px 2px 2px;
+		height: 200px;
+		width: 400px;
+		background: linear-gradient(darkred, goldenrod);
+		background: -moz-linear-gradient(darkred, goldenrod);
+		background: -webkit-linear-gradient(darkred, goldenrod);
+		position: relative;
+		border: 2px solid white;
+		border-radius: 5px;
+	}
+
+	#button1:hover {
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+		}
+
+	#button2 {
+		margin:2px 2px 2px 2px;
+		height: 200px;
+		width: 400px;
+		background: linear-gradient(darkred, sandybrown);
+		background: -moz-linear-gradient(darkred, sandybrown);
+		background: -webkit-linear-gradient(darkred, sandybrown);
+		position: relative;
+		border: 2px solid white;
+		border-radius: 5px;
+	}
+
+	#button2:hover {
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+		}
+
+	#button3 {
+		margin:2px 2px 2px 2px;
+		height: 200px;
+		width: 400px;
+		background: linear-gradient(darkred, indianred);
+		background: -moz-linear-gradient(darkred, indianred);
+		background: -webkit-linear-gradient(darkred, indianred);
+		position: relative;
+		border: 2px solid white;
+		border-radius: 5px;
+	}
+
+	#button3:hover {
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+		}
+
+	#button4 {
+		margin:2px 2px 2px 2px;
+		height: 200px;
+		width: 400px;
+		background: linear-gradient(midnightblue, slategray);
+		background: -moz-linear-gradient(midnightblue, slategray);
+		background: -webkit-linear-gradient(midnightblue, slategray);
+		position: relative;
+		border: 2px solid white;
+		border-radius: 5px;
+	}
+
+	#button4:hover {
+		background: linear-gradient(darkorange, gold);
+		background: -moz-linear-gradient(darkorange, gold);
+		background: -webkit-linear-gradient(darkorange, gold);
+		}
+
+	.menuText {
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		margin-top: -25px;
+		font-size: 40px;
+		font-weight:bold;
+		color: white;
+		text-decoration: none;
+		padding:0 0 0 0;
+	}
+
+/*カレンダーボタン*/
+
+	#menu-btn {
+		position: fixed;
+		cursor: pointer;
+		top: 10px;
+		right: 15px;
+		display: flex;
+		height: 60px;
+		width: 60px;
+		justify-content: center;
+		align-items: center;
+		z-index: 90;
+		background: white;
+		border: 3px solid black;
+		border-radius: 25%;
+	}
+
+	#menu-btn span,
+	#menu-btn span::before,
+	#menu-btn span::after {
+		transition: all 0.5s;
+	}
+
+	#menu-btn-check:checked ~ #menu-btn span::before {
+		bottom: 0;
+		transform: rotate(45deg);
+	}
+
+	#menu-btn-check:checked ~ #menu-btn span::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	#menu-btn-check:checked ~ #menu-content {
+		left: 40%;
+	}
+
+	#menu-btn-check {
+		display: none;
+	}
+
+	#menu-content {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 92%;
+		z-index: 80;
+		background: rgba(32, 32, 32, 0.95);
+		transition: all 0.5s;
+	}
+
+/*カレンダー*/
+
+	.calWrapper{
+		float: left;
+		width: 400px;
+		height: 455px;
+		margin: 140px auto auto 15%;
+		background: white;
+		color: black;
+	}
+
+	#calTitle {
+		font-weight: bold;
+		margin: auto;
+		text-align: center;
+		font-size: 30px;
+		background: #e8383d;
+		color: white;
+	}
+
+	.cld-main{
+		width: 100%;
+	}
+	.cld-main a{
+		color: #0080FF;
+	}
+	.cld-main svg{
+		fill: #0080FF;
+	}
+	.cld-datetime{
+		position: relative;
+		padding: 20px 0px;
+		max-width: 500px;
+		margin: auto;
+		overflow: hidden;
+	}
+	.cld-datetime .today{
+		position: relative;
+		float: left;
+		width: calc(100% - 40px);
+		margin: auto;
+		text-align: center;
+	}
+	.cld-nav{
+		position: relative;
+		width: 20px;
+		height: 20px;
+		margin-top: 2px;
+	}
+	.cld-nav:hover{
+		cursor: pointer;
+	}
+	.cld-nav:hover svg{
+		fill: #005EFF;
+	}
+	.cld-rwd{
+		float: left;
+	}
+	.cld-fwd{
+		float: right;
+	}
+	.cld-labels,
+	.cld-days{
+		padding-left: 0;
+	}
+	.cld-label,
+	.cld-day{
+		box-sizing: border-box;
+		display: inline-block;
+		width: 14.28%;
+		text-align: center;
+	}
+	.cld-day{
+		border: 1px solid #eee;
+	}
+	.cld-day.today .cld-number{
+		background: #e8383d;;
+		color: white;
+	}
+	.cld-day.disableDay{
+		opacity: 0.5;
+	}
+	.cld-day.nextMonth,
+	.cld-day.prevMonth{
+		opacity: 0.33;
+	}
+	.cld-number{
+		position: relative;
+		margin: 0;
+		padding: 10px;
+	}
+	.cld-title{
+		position: absolute;
+		z-index: 5;
+		display: none;
+		top: 35px;
+		left: 0;
+		padding: 5px 10px;
+		background: #fff;
+		white-space: nowrap;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 18px;
+	}
+	.cld-number:hover .cld-title{
+		display: block;
+	}
+	.cld-title::before{
+		content: '';
+		position: absolute;
+		top: -7.5px; left: 10px;
+		width: 0;
+		height: 0;
+		border-left: 7.5px solid transparent;
+		border-right: 7.5px solid transparent;
+		border-bottom: 7.5px solid #ccc;
+	}
+	.cld-number.eventday{
+		font-weight: bold;
+		color: #e8383d;;
+	}
+	.cld-number.eventday:hover{
+		cursor: pointer;
+		background: #eee;
+	}
+	.today .cld-number.eventday:hover{
+		background: #005EFF;
+	}
+
+/*メディアクエリ*/
+@media screen and (min-width: 390px){
+	.pc {
+		display: block;
+	}
+
+	.smartphone {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 390px){
+
+	body {
+		background-repeat: repeat-y;
+	}
+
+	.pc {
+		display: none;
+	}
+
+	.smartphone {
+		display: block;
+	}
+
+	.logout {
+		font-size: 10px;
+		vertical-align: 10%;
+		padding: 5px 20px 5px 20px;
+		margin: 0 0 0 10px;
+	}
+
+	.pay {
+		font-size: 20px;
+		vertical-align: 10%;
+		padding: 5px 20px 5px 20px;
+		margin: 0 0 0 10px;
+	}
+
+	.menuWrapper {
+		margin-top: 10px;
+	}
+
+	.menuText {
+		position: absolute;
+		top: 50%;
+		left: 25%;
+		margin-top: -25px;
+		font-size: 30px;
+	}
+
+	#button1 {
+		margin: 30px 0 0 10px;
+		height: 100px;
+		width: 300px;
+	}
+
+	#button2 {
+		margin: 30px 0 0 10px;
+		height: 100px;
+		width: 300px;
+	}
+
+	#button3 {
+		margin: 30px 0 0 10px;
+		height: 100px;
+		width: 300px;
+	}
+
+	#button4 {
+		margin: 30px 0 0 10px;
+		height: 100px;
+		width: 300px;
+	}
+
+	#menu-btn {
+		right: 15px;
+		top: 60px;
+		height: 55px;
+		width: 55px;
+	}
+
+	#menu-content {
+		width: 450px;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 100%;
+		transition: all 0.5s;
+	}
+
+	#menu-btn-check:checked ~ #menu-content {
+		left: -60px;
+	}
+
+	.calWrapper{
+		float: left;
+		width: 390px;
+		height: 455px;
+		margin: 30% 0 auto 60px;
+		background: white;
+		color: black;
+	}
+}
