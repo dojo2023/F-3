@@ -1,16 +1,18 @@
 package model;
 import java.io.Serializable;
 public class User implements Serializable {
-  private String userID;
-  private String userPW;
+  private int number;
+  private String userid;
+  private String userpw;
   private int max;
   private int age;
   private String gender;
 
-public User(String userID, String userPW, int max, int age, String gender) {
+public User(int number,String userid, String userpw, int max, int age, String gender) {
 	super();
-	this.userID = userID;
-	this.userPW = userPW;
+	this.number = number;
+	this.userid = userid;
+	this.userpw = userpw;
 	this.max = max;
 	this.age = age;
 	this.gender = gender;
@@ -18,27 +20,36 @@ public User(String userID, String userPW, int max, int age, String gender) {
 
 public User() {
 	super();
-	this.userID = "";
-	this.userPW = "";
+	this.number = 0;
+	this.userid = "";
+	this.userpw = "";
 	this.max = 0;
 	this.age = 0;
 	this.gender = "";
 }
 
-public String getUserID() {
-	return userID;
+public int getNumber() {
+	return number;
 }
 
-public void setUserID(String userID) {
-	this.userID = userID;
+public void setNumber(int number) {
+	this.number = number;
 }
 
-public String getUserPW() {
-	return userPW;
+public String getUserid() {
+	return userid;
 }
 
-public void setUserPW(String userPW) {
-	this.userPW = userPW;
+public void setUserid(String userid) {
+	this.userid = userid;
+}
+
+public String getUserpw() {
+	return userpw;
+}
+
+public void setUserpw(String userpw) {
+	this.userpw = userpw;
 }
 
 public int getMax() {

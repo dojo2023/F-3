@@ -306,7 +306,7 @@ input[type=radio][value="female1.png"]+label:before {
 
 input[type=radio]:checked+label::before {
     /* border: 6px solid white; */
-    background-image: url(img/object/circle.png);
+    background-image: url(/nomikai/img/object/circle.png);
     background-repeat: no-repeat;
     box-sizing: border-box;
 }

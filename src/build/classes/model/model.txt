@@ -1,0 +1,9 @@
+このパッケージには
+User.java, Drink.java, Friends.java, Roulette.java
+を追加してください
+
+- 各ファイルの担当者 -
+User.java     : 朝倉
+Drink.java    : 田中
+Friends.java  : 田中
+Roulette.java : 朝倉

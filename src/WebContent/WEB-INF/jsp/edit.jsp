@@ -15,26 +15,26 @@
 
     <main>
         <div>
-            <p class="img-style1"><img class="img-style1-1" src="/img/object/manaita.png"></p>
+            <p class="img-style1"><img class="img-style1-1" src="/nomikai/img/object/manaita.png"></p>
             <p class="p-style">ID</p>
             <p class="input-style1"><input class="input-style1-1" type="text" name="changeID" placeholder="新しいIDを入力"></p>
             <p class="p-style2">パスワード</p>
             <p class="input-style2"><input class="input-style2-1" type="password" name="changePW" placeholder="新しいパスワードを入力"></p>
         </div>
         <div>
-            <p class="img-style2"><img class="img-style2-1" src="/img/object/manaita.png"></p>
+            <p class="img-style2"><img class="img-style2-1" src="/nomikai/img/object/manaita.png"></p>
             <p class="p-style3">上限金額</p>
             <p class="input-style3"><input class="input-style3-1" type="text" name="changeMax"></p>
             <p class="p-style4">円</p>
         </div>
         <div>
-            <p class="img-style3"><img class="img-style3-1" src="/img/object/manaita.png"></p>
+            <p class="img-style3"><img class="img-style3-1" src="/nomikai/img/object/manaita.png"></p>
             <p class="p-style5">年齢</p>
             <p class="input-style4"><input class="input-style4-1" type="number" name="changeAge"></p>
             <p class="p-style6">歳</p>
         </div>
         <div>
-            <p class="img-style4"><img class="img-style4-1" src="/img/object/manaita.png"></p>
+            <p class="img-style4"><img class="img-style4-1" src="/nomikai/img/object/manaita.png"></p>
             <p class="p-style7">男性　女性　その他</p>
         </div>
         <div>
