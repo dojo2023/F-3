@@ -1,0 +1,44 @@
+/*全ページ共通のcssファイル*/
+footer {
+
+}
+
+.menu {
+    padding: 0;
+}
+
+.menuBar {
+        background: rgba(139, 0, 0, 0.8);
+        list-style-type: none;
+        text-align: justify;
+}
+
+.menuText {
+        font-family: HGS行書体;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 0 15px 0 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+}
+
+.menuText:link {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:visited {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:active {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:hover {
+        text-decoration: none;
+        color: gold;
+}
