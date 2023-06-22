@@ -31,7 +31,10 @@
                 </td>
                 <td>
                     <span class="fonts result-style">
-                        <span id="drink">0</span>
+                        <span>
+                          <input id="drink" type="text" value="0"
+                          class="fonts cntInput"  readonly size=1>
+                        </span>
                         <span>杯</span>
                     </span>
                 </td>
@@ -51,7 +54,8 @@
                 </td>
                 <td>
                     <span class="fonts result-style">
-                        <span id="eat">0</span>
+                     <input id="eat" type="text" value="0"
+                          class="fonts cntInput"  readonly size=1>
                         <span>食</span>
                     </span>
                 </td>
@@ -68,7 +72,7 @@
                 </td>
                 <td>
                     <div class="result-style" style="padding: 0;">
-                        <input id="mony" type="text" class="fonts account-input">
+                        <input id="money" type="text" class="fonts account-input">
                         <span class="fonts account-en">円</span>
                     </div>
                 </td>
@@ -169,7 +173,7 @@
 
     <!-- ----------------------------------------------------------------------- -->
     <!-- スマホ画面対応レスポンシブ画面 -->
-    <form action="" class="resp">
+   <form action="" class="resp">
         <div class="h1-style">
             <h1 class="fonts" style="background-color: white;">データ登録</h1>
         </div>
@@ -186,7 +190,8 @@
                 <td>
                     <span class="fonts result-style"
                         style="display: block; width: 60px; height: 20px; margin-left: 10px;">
-                        <span id="drinkMobile" style="font-size: 20px;">0</span>
+                        <input id="drinkMobile" type="text" name="DRINK" value="0"
+                          class="fonts cntInput" readonly size=1>
                         <span style="font-size: 20px;">杯</span>
                     </span>
                 </td>
@@ -207,7 +212,9 @@
                 <td>
                     <span class="fonts result-style"
                         style="display: block; width: 60px; height: 20px; margin-left: 10px;">
-                        <span id="eatMobile" style="font-size: 20px;">0</span>
+
+                        <input id="eatMobile" type="text" name="EAT" value="0"
+                          class="fonts cntInput" readonly size=1>
                         <span style="font-size: 20px;">食</span>
                     </span>
                 </td>
@@ -225,7 +232,7 @@
                 </td>
                 <td>
                     <div class="result-style" style="padding: 0;">
-                        <input id="monyInput" type="text" class="fonts account-input">
+                        <input id="moneyInput" type="text" class="fonts account-input" name="MONEY">
                         <span class="fonts account-en">円</span>
                     </div>
                 </td>
@@ -239,7 +246,7 @@
         <table class="table-style">
             <tr>
                 <td>
-                    <button id="btn" type="button" class="fonts label-style">▼ 友達選択</button>
+                    <button id="friendListBtnMobile" type="button" class="fonts label-style">▼ 友達選択</button>
                 </td>
                 <td style="padding: 0 30px;"></td>
                 <td>
@@ -249,66 +256,113 @@
                     </button>
                 </td>
             </tr>
+             <tr>
+                <td>
+                    <div id="friendsListMobile" class="box-style-mobile">
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                        <input type="checkbox" name="" id="">こんにちは<br>
+                    </div>
+                </td>
+            </tr>
         </table>
 
 
         <table class="table-style">
             <tr>
                 <td>
-                    <!-- アイコンスライダーを導入 -->
-                    <!-- Swiper START -->
-                    <div class="swiper-container" style="width: 350px; height: 160px; overflow: hidden;">
-                        <!-- メイン表示部分 -->
+                     <!-- スライダーのメインコンテナ要素（必須） -->
+                    <div class="swiper" style="width: 300px; height: 150px;">
+                        <!-- スライドを囲む要素（必須） -->
                         <div class="swiper-wrapper">
-                            <!-- 各スライド -->
-                            <!-- <div class="swiper-slide"> -->
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon1.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon2.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon3.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon4.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon5.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon6.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon7.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon8.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon9.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon11.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon12.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                            <img class="swiper-slide" src="/nomikai/img/icon/icon13.png" alt=""
-                                style="border-radius: 50%; height: 80px; width: 80px;">
-                        </div>
-                        <div style="width: 350px;">
-                            <div class="swiper-button-prev"
-                                style="position: relative; display: inline-block; padding-top: 35px; padding-right: 20px;">
+                            <!-- スライド要素（必須） -->
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon1.png" alt="">
+                                <p>icon1</p>
                             </div>
-                            <span style="margin: 0 150px;"></span>
-                            <div class="swiper-button-next"
-                                style="display: inline-block; padding-right: 50px; padding-top: 35px; padding-right: 25%;"></div>
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon2.png" alt="">
+                                <p>icon2</p>
+                            </div>
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon3.png" alt="">
+                                <p>icon3</p>
+                            </div>
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon4.png" alt="">
+                                <p>icon4</p>
+                            </div>
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon5.png" alt="">
+                                <p>icon5</p>
+                            </div>
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon6.png" alt="">
+                                <p>icon6</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon7.png" alt="">
+                                <p>icon7</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon8.png" alt="">
+                                <p>icon8</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon9.png" alt="">
+                                <p>icon9</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon10.png" alt="">
+                                <p>icon10</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon11.png" alt="">
+                                <p>icon11</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon12.png" alt="">
+                                <p>icon12</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon13.png" alt="">
+                                <p>icon13</p>
+                            </div>
+                            <div class="swiper-slide"
+                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
+                                <img src="/nomikai/img/icon/icon14.png" alt="">
+                                <p>icon14</p>
+                            </div>
+
                         </div>
-                        <!-- <div class="swiper-pagination"></div> -->
+                        <!-- ナビゲーションボタン要素（省略可能） -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
-                    <!-- Swiper END -->
 
                 </td>
                 <td style="padding: 0 20px;"></td>
             </tr>
         </table>
-        <!-- <span class="fonts label-style" style="padding: 0; display: inline-block; text-align: center; margin-top: 30px;"> -->
         <button type="button" class="fonts label-style"
             style="margin: auto; display: block; height: 40px; width: 100px;">登録</button>
-        <!-- </span> -->
     </form>
-
 
 
     <!-- ------ 新規友達登録ウィンドウ ------ -->

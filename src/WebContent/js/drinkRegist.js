@@ -13,15 +13,15 @@ function btnCount(i) {
 
             if (i === 1) {
                 drink = cntUp(drink);
-                document.getElementById('drink').textContent = drink;
+                document.getElementById('drink').value = drink;
                 drinkMob = cntUp(drinkMob);
-                document.getElementById('drinkMobile').textContent = drinkMob;
+                document.getElementById('drinkMobile').value = drinkMob;
             }
             else {
                 eat = cntUp(eat);
-                document.getElementById('eat').textContent = eat;
+                document.getElementById('eat').value = eat;
                 eatMob = cntUp(eatMob);
-                document.getElementById('eatMobile').textContent = eatMob;
+                document.getElementById('eatMobile').value = eatMob;
             }
         }
 
@@ -35,20 +35,20 @@ function btnCount(i) {
          // リセットボタンのメソッド
         function resetBtn(i) {
             if (i === 1) {
-                document.getElementById('drink').textContent = `0`;
+                document.getElementById('drink').value = `0`;
                 drink = 0;
-                document.getElementById('drinkMobile').textContent = `0`;
+                document.getElementById('drinkMobile').value = `0`;
                 drinkMob = 0;
             }
             else if (i === 2) {
-                document.getElementById('eat').textContent = `0`;
+                document.getElementById('eat').value = `0`;
                 eat = 0;
-                document.getElementById('eatMobile').textContent = `0`;
+                document.getElementById('eatMobile').value = `0`;
                 eatMob = 0;
             }
             else {
-                document.getElementById('mony').value = ``;
-                document.getElementById('monyInput').value = ``;
+                document.getElementById('money').value = ``;
+                document.getElementById('moneyInput').value = ``;
             }
         }
 
@@ -70,18 +70,19 @@ function btnCount(i) {
 
 
         // スライダー
-        var mySwiper = new Swiper('.swiper-container', {
+         let mySwiper = new Swiper('.swiper', {
+
+            // オプション設定
             loop: true,
-            slidesPerView: 4,
+
+            // 以下のコードは省略可能
+            //ナビゲーションボタン（矢印）表示の設定
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev'
+                nextEl: '.swiper-button-next', //「次へボタン」要素の指定
+                prevEl: '.swiper-button-prev', //「前へボタン」要素の指定
             },
-            pagination: {
-                el: '.swiper-pagination',
-                type: 'bullets',
-                clickable: true
-            }
+            //ここまで省略可能
+            slidesPerView: 3 // 画像の表示枚数
         });
 
          // ふわっとボックスを表示する
@@ -145,3 +146,15 @@ function btnCount(i) {
             registBox.style.opacity = "0";
             registBox.style.zIndex = -10;
         });
+
+
+       let friendList = document.getElementById('friendListBtnMobile');
+        friendList.addEventListener('click', function () {
+            let list = document.querySelector('.box-style-mobile');
+            if (list.style.display === "none") {
+                list.style.display = `block`;
+            }
+            else {
+                list.style.display = `none`;
+            }
+        })

@@ -12,6 +12,15 @@
             z-index: -1;
         }
 
+        .cntInput {
+          border: none;
+          outline: none;
+          font-size: 30px;
+          text-align: center;
+          height: 30px;
+          width: 30px;
+        }
+
         .fonts {
             font-family: HG行書体;
         }
@@ -334,6 +343,47 @@
                 display: inline-block;
                 padding: 0 80px;
             }
+
+            /* スライダーのアイコン画像スタイル定義 */
+            .swiper-wrapper img {
+                height: 60px;
+                width: 60px;
+                margin: auto;
+                display: block;
+                border: 5px solid red;
+                border-radius: 50%;
+                /* margin: 0 5px; */
+                background-color: white;
+                position: relative;
+            }
+
+            .swiper-wrapper p {
+                text-align: center;
+                /* display: block; */
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                /* width: 100px; */
+            }
+
+            .box-style-mobile {
+                height: 100px;
+                width: 120px;
+                overflow-y: scroll;
+                display: none;
+                background-color: #fff;
+                margin: auto;
+            }
+
+        .cntInput {
+          border: none;
+          outline: none;
+          font-size: 20px;
+          text-align: center;
+          height: 20px;
+          width: 20px;
+        }
 
             .h1-style {
                 text-align: center;

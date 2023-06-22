@@ -12,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class drinkRegistServlet
  */
-@WebServlet("/drinkRegistServlet")
-public class drinkRegistServlet extends HttpServlet {
+@WebServlet("/DrinkRegistServlet")
+public class DrinkRegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
@@ -32,8 +32,12 @@ public class drinkRegistServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		// リクエストパラメータの受け取り
+		request.setCharacterEncoding("UTF-8");
+		Integer drink = Integer.parseInt(request.getParameter("DRINK"));
+		Integer eat = Integer.parseInt(request.getParameter("EAT"));
+		Integer money = Integer.parseInt(request.getParameter("MONEY"));
+
 	}
 
 }

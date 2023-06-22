@@ -850,3 +850,186 @@ INSERT INTO friends (visitTimes, avator) VALUES('寅さん', 1, '/nomikai/img/ic
 org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "SELECT * FROMUSERINFO[*]"
 Syntax error in SQL statement "SELECT * FROMUSERINFO[*]"; SQL statement:
 SELECT * FROMUSERINFO [42000-200]
+2023-06-21 10:25:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "STRING"
+Unknown data type: "STRING"; SQL statement:
+CREATE TABLE roulette(
+  number int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name String NOT NULL
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-21 10:25:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: 不明なデータ型: "STRING"
+Unknown data type: "STRING"; SQL statement:
+CREATE TABLE roulette(
+  number int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name string NOT NULL
+) [50004-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.command.Parser.parseColumnWithType(Parser.java:5971)
+	at org.h2.command.Parser.parseColumnForTable(Parser.java:5697)
+	at org.h2.command.Parser.parseTableColumnDefinition(Parser.java:8442)
+	at org.h2.command.Parser.parseCreateTable(Parser.java:8379)
+	at org.h2.command.Parser.parseCreate(Parser.java:6276)
+	at org.h2.command.Parser.parsePrepared(Parser.java:903)
+	at org.h2.command.Parser.parse(Parser.java:843)
+	at org.h2.command.Parser.parse(Parser.java:815)
+	at org.h2.command.Parser.prepareCommand(Parser.java:738)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-22 13:17:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "NAME" が見つかりません
+Column "NAME" not found; SQL statement:
+UPDATE userInfo SET max = 20000 WHERE name LIKE 'kamei' [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.CompareLike.optimize(CompareLike.java:102)
+	at org.h2.command.dml.Update.prepare(Update.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-22 13:19:05 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列 "NAME" が見つかりません
+Column "NAME" not found; SQL statement:
+UPDATE userInfo SET max = 20000 WHERE name LIKE 'Kamei' [42122-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:163)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:145)
+	at org.h2.expression.condition.CompareLike.optimize(CompareLike.java:102)
+	at org.h2.command.dml.Update.prepare(Update.java:266)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-22 13:21:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO nomiInfo VALUES(2, 3, 1700, 57, '男', CURDATE()) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-22 13:21:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO nomiInfo VALUES(3, 5, 2323, 57, '男', CURDATE()) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+2023-06-22 13:21:06 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: 列番号が一致しません
+Column count does not match; SQL statement:
+INSERT INTO nomiInfo VALUES(1, 2, 1398, 57, '男', CURDATE()) [21002-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:453)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:319)
+	at org.h2.command.Parser.prepareCommand(Parser.java:744)
+	at org.h2.engine.Session.prepareLocal(Session.java:657)
+	at org.h2.engine.Session.prepareCommand(Session.java:595)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1235)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:212)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:201)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1459)
+	at org.h2.server.web.WebApp.query(WebApp.java:1116)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1078)
+	at org.h2.server.web.WebApp$1.next(WebApp.java:1065)
+	at org.h2.server.web.WebThread.process(WebThread.java:178)
+	at org.h2.server.web.WebThread.run(WebThread.java:94)
+	at java.base/java.lang.Thread.run(Thread.java:834)
