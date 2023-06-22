@@ -15,24 +15,22 @@
 
 	<header>
 		<h1 class="head">
-			<img src ="logo.png" width="8%" id="logoImg">
-			<a href="login.jsp" class="logout">ログアウト</a>
-			<a href="payment.jsp" class="pay">お会計</a>
+			<img src = "/nomikai/img/object/logo.png" width="8%" id="logoImg">
+			<a href= "/nomikai/LoginServlet" class="logout">ログアウト</a>
+			<a href="/nomikai/PaymentServlet" class="pay">お会計</a>
 		</h1>
 	</header>
-
-<body>
 
 <div class="pc">
 <table class="menuWrapper">
 	<tr>
-		<td><a href="drinkRegist.jsp">
+		<td><a href="/nomikai/DrinkRegistServlet">
 			<div id="button1">
 				<span class="menuText">飲み会登録</span>
 			</div>
 			</a>
 		</td>
-		<td><a href="drinkRecord.jsp">
+		<td><a href="/nomikai/DrinkServlet">
 			<div id="button2">
 				<span class="menuText">データ閲覧</span>
 			</div>
@@ -41,13 +39,13 @@
 	</tr>
 
 	<tr>
-		<td ><a href="friendsRecord.jsp">
+		<td ><a href="/nomikai/FriendsRecordServlet">
 			<div id="button3">
 				<span class="menuText">呑み友一覧</span>
 			</div>
 			</a>
 		</td>
-		<td><a href="edit.jsp">
+		<td><a href="/nomikai/EditServlet">
 			<div id="button4">
 				<span class="menuText">　設　定　</span>
 			</div>
@@ -60,7 +58,7 @@
 <div class="smartphone">
 <table class="menuWrapper">
 	<tr>
-		<td><a href="drinkRegist.jsp">
+		<td><a href="/nomikai/DrinkRegistServlet">
 			<div id="button1">
 				<span class="menuText">飲み会登録</span>
 			</div>
@@ -68,7 +66,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td><a href="drinkRecord.jsp">
+		<td><a href="/nomikai/DrinkServlet">
 			<div id="button2">
 				<span class="menuText">データ閲覧</span>
 			</div>
@@ -77,7 +75,7 @@
 	</tr>
 
 	<tr>
-		<td ><a href="friendsRecord.jsp">
+		<td ><a href="/nomikai/FriendsRecordServlet">
 			<div id="button3">
 				<span class="menuText">呑み友一覧</span>
 			</div>
@@ -85,7 +83,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td><a href="edit.jsp">
+		<td><a href="/nomikai/EditServlet">
 			<div id="button4">
 				<span class="menuText">　設　定　</span>
 			</div>

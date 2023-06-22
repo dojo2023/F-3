@@ -6,6 +6,7 @@
 <title>設定</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="/nomikai/css/edit.css" rel="stylesheet">
+<link href="/nomikai/css/common.css" rel="stylesheet">
 </head>
 
 <body>
@@ -17,9 +18,9 @@
         <div>
             <p class="img-style1"><img class="img-style1-1" src="/nomikai/img/object/manaita.png"></p>
             <p class="p-style">ID</p>
-            <p class="input-style1"><input class="input-style1-1" type="text" name="changeID" placeholder="新しいIDを入力"></p>
+            <p class="input-style1"><input class="input-style1-1" type="text" name="changeID" placeholder="新規ID"></p>
             <p class="p-style2">パスワード</p>
-            <p class="input-style2"><input class="input-style2-1" type="password" name="changePW" placeholder="新しいパスワードを入力"></p>
+            <p class="input-style2"><input class="input-style2-1" type="password" name="changePW" placeholder="新規PW"></p>
         </div>
         <div>
             <p class="img-style2"><img class="img-style2-1" src="/nomikai/img/object/manaita.png"></p>
@@ -39,11 +40,11 @@
         </div>
         <div>
             <p class="radio-style">
-                <input type="radio" name="changeMan" value="男性" id="iconSelectMale1" checked>
+                <input type="radio" name="iconSelect" value="男性" id="iconSelectMale1" checked>
                 <label for="iconSelectMale1"></label>
-                <input type="radio" name="changeMen" value="女性" id="iconSelectMale2">
+                <input type="radio" name="iconSelect" value="女性" id="iconSelectMale2">
                 <label for="iconSelectMale2"></label>
-                <input type="radio" name="changeOther" value="その他" id="iconSelectFemale1">
+                <input type="radio" name="iconSelect" value="その他" id="iconSelectFemale1">
                 <label for="iconSelectFemale1"></label>
             </p>
         </div>
@@ -66,5 +67,16 @@
             </a>
         </div>
     </main>
+    <footer>
+    <ul class="menu">
+        <li class="menuBar">
+            <a href="/nomikai/DrinkRegistServlet" class="menuText">&#127867;飲み会登録</a>
+            <a href="/nomikai/DrinkServlet" class="menuText">&#129534;データ閲覧</a><br>
+            <hr>
+            <a href="/nomikai/FriendsRecordServlet" class="menuText">&#129309;呑み友一覧</a>
+            <a href="/nomikai/EditServlet" class="menuText">&#9881;&#65039;設定</a>
+        </li>
+    <ul>
+</footer>
 </body>
 </html>

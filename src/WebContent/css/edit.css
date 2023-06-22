@@ -8,15 +8,12 @@
     /* 背景を画面全体に表示 */
     background-size: cover;
 }
-
 /* --pc-input-------------------------------------------- */
-
 .input-style1 {
     position: absolute;
     top: 65px;
     left: 350px;
 }
-
 .input-style1-1 {
     width: 100%;
     padding: 0.7em 2em;
@@ -24,13 +21,11 @@
     top: -20px;
     left: 0px;
 }
-
 .input-style2 {
     position: absolute;
     top: 130px;
     left: 350px;
 }
-
 .input-style2-1 {
     width: 100%;
     padding: 0.7em 2em;
@@ -38,13 +33,11 @@
     top: -20px;
     left: 0px;
 }
-
 .input-style3 {
     position: absolute;
     top: 250px;
     left: 870px;
 }
-
 .input-style3-1 {
     width: 100%;
     padding: 0.7em 2em;
@@ -52,13 +45,11 @@
     top: -20px;
     left: -5px;
 }
-
 .input-style4 {
     position: absolute;
     top: 370px;
     left: 370px;
 }
-
 .input-style4-1 {
     width: 100%;
     padding: 0.7em 2em;
@@ -66,15 +57,12 @@
     top: -15px;
     left: -20px;
 }
-
 /* --pc-img-------------------------------------------- */
-
 .img-style1 {
     position: absolute;
     top: 20px;
     left: 100px;
 }
-
 .img-style1-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -86,13 +74,11 @@ position: relative;
 top: -15px;
 left: -20px;
 }
-
 .img-style2 {
     position: absolute;
     top: 200px;
     left: 600px;
 }
-
 .img-style2-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -104,13 +90,11 @@ position: relative;
 top: -20px;
 left: 0px;
 }
-
 .img-style3 {
     position: absolute;
     top: 325px;
     left: 150px;
 }
-
 .img-style3-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -121,14 +105,12 @@ position: relative;
 top: -15px;
 left: 30px;
 }
-
 .img-style4 {
     position: absolute;
     top: 460px;
     left: 550px;
     z-index: -2;
 }
-
 .img-style4-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -139,14 +121,12 @@ position: relative;
 top: -10px;
 left: 50px;
 }
-
 .img-style5 {
     position: absolute;
     top: 450px;
     left: 10px;
     z-index: -2;
 }
-
 .img-style5-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -155,14 +135,12 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 .img-style6 {
     position: absolute;
     top: 450px;
     left: 100px;
     z-index: -2;
 }
-
 .img-style6-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -171,14 +149,12 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 .img-style7 {
     position: absolute;
     top: 450px;
     left: 200px;
     z-index: -1;
 }
-
 .img-style7-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -187,9 +163,7 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 /* --pc-p-------------------------------------------- */
-
 .p-style {
     font-family: HGP行書体;
     font-size: 50px;
@@ -197,7 +171,6 @@ height: 150px;
     top: 8px;
     left: 230px;
 }
-
 .p-style2 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -205,7 +178,6 @@ height: 150px;
     top: 70px;
     left: 140px;
 }
-
 .p-style3 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -213,7 +185,6 @@ height: 150px;
     top: 190px;
     left: 650px;
 }
-
 .p-style4 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -221,7 +192,6 @@ height: 150px;
     top: 190px;
     left: 1140px;
 }
-
 .p-style5 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -229,7 +199,6 @@ height: 150px;
     top: 310px;
     left: 220px;
 }
-
 .p-style6 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -237,7 +206,6 @@ height: 150px;
     top: 310px;
     left: 650px;
 }
-
 .p-style7 {
     font-family: HGP行書体;
     font-size: 50px;
@@ -247,7 +215,6 @@ height: 150px;
     left: 670px;
     z-index: -1;
 }
-
 .p-style8 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #FFEDB3;
@@ -256,7 +223,6 @@ height: 150px;
     top: 487px;
     left: 45px;
 }
-
 .p-style9 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #fff;
@@ -265,7 +231,6 @@ height: 150px;
     top: 480px;
     left: 137px;
 }
-
 .p-style10 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #FF0000;
@@ -274,14 +239,11 @@ height: 150px;
     top: 540px;
     left: 237px;
 }
-
 /* --pc-radio-------------------------------------------- */
-
 .radio-style {
     margin-top: 470px;
     margin-left: 650px;
 }
-
 input[type=radio]+label:before {
     content: "";
     display: inline-block;
@@ -291,120 +253,102 @@ input[type=radio]+label:before {
     /* border: 6px solid white; */
     box-sizing: border-box;
 }
-
 input[type=radio][value="男性"]+label:before{
 background-image: url(male1.png);
 }
-
 input[type=radio][value="male2.png"]+label:before {
     background-image: url(male2.png);
 }
-
 input[type=radio][value="female1.png"]+label:before {
     background-image: url(female1.png);
 }
-
 input[type=radio]:checked+label::before {
     /* border: 6px solid white; */
     background-image: url(/nomikai/img/object/circle.png);
     background-repeat: no-repeat;
     box-sizing: border-box;
 }
-
 input[type=radio] {
     display: none;
 }
-
 /* @@sp-body@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
-
 @media screen and (max-width: 450px){
+
+main {
+	position: absolute;
+	top: -5%
+}
 
 body {
     background-image: url(/nomikai/img/backImage/setting3-sp.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* --sp-input-------------------------------------------- */
-
 .input-style1 {
     position: absolute;
     top: 90px;
     left: 160px;
 }
-
 .input-style1-1 {
     width: 50%;
 }
-
 .input-style2 {
     position: absolute;
     top: 140px;
     left: 160px;
 }
-
 .input-style2-1 {
     width: 50%;
 }
-
 .input-style3 {
     position: absolute;
     top: 250px;
     left: 165px;
 }
-
 .input-style3-1 {
     width: 50%;
 }
-
 .input-style4 {
     position: absolute;
     top: 370px;
     left: 180px;
 }
-
 .input-style4-1 {
     width: 50%;
 }
-
 /* --sp-img-------------------------------------------- */
-
 .img-style1 {
     position: absolute;
     top: 55px;
     left: 0px;
 }
-
 .img-style1-1 {
     /* 背景画像の繰り返しを防ぐ */
     background-repeat: no-repeat;
     /* 背景を画面全体に表示 */
     background-size: cover;
-    width: 100%;
+    width: 110%;
     height: 7em;
 }
-
 .img-style2 {
     position: absolute;
     top: 225px;
     left: -20px;
 }
-
 .img-style2-1 {
     /* 背景画像の繰り返しを防ぐ */
     background-repeat: no-repeat;
     /* 背景を画面全体に表示 */
     background-size: cover;
-    width: 100%;
+    width: 110%;
     height: 5em;
 }
-
 .img-style3 {
     position: absolute;
     top: 350px;
     left: -35px;
 }
-
 .img-style3-1 {
     /* 背景画像の繰り返しを防ぐ */
     background-repeat: no-repeat;
@@ -414,14 +358,12 @@ body {
     height: 5em;
     padding: 0px 10px 0px;
 }
-
 .img-style4 {
     position: absolute;
     top: 490px;
     left: -40px;
     z-index: -2;
 }
-
 .img-style4-1 {
     /* 背景画像の繰り返しを防ぐ */
     background-repeat: no-repeat;
@@ -430,14 +372,12 @@ body {
     width: 100%;
     height: 5em;
 }
-
 .img-style5 {
     position: absolute;
     top: 600px;
     left: 10px;
     z-index: -2;
 }
-
 .img-style5-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -446,14 +386,12 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 .img-style6 {
     position: absolute;
     top: 600px;
     left: 100px;
     z-index: -2;
 }
-
 .img-style6-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -462,14 +400,12 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 .img-style7 {
     position: absolute;
     top: 600px;
     left: 200px;
     z-index: -1;
 }
-
 .img-style7-1 {
 /* 背景画像の繰り返しを防ぐ */
 background-repeat: no-repeat;
@@ -478,9 +414,7 @@ background-size: cover;
 width: 120px;
 height: 150px;
 }
-
 /* --sp-p-------------------------------------------- */
-
 .p-style {
     font-family: HGP行書体;
     font-size: 35px;
@@ -488,7 +422,6 @@ height: 150px;
     top: 50px;
     left: 80px;
 }
-
 .p-style2 {
     font-family: HGP行書体;
     font-size: 35px;
@@ -496,7 +429,6 @@ height: 150px;
     top: 100px;
     left: 10px;
 }
-
 .p-style3 {
     font-family: HGP行書体;
     font-size: 35px;
@@ -504,15 +436,13 @@ height: 150px;
     top: 210px;
     left: 10px;
 }
-
 .p-style4 {
     font-family: HGP行書体;
     font-size: 35px;
     position: absolute;
     top: 210px;
-    left: 330px;
+    left: 300px;
 }
-
 .p-style5 {
     font-family: HGP行書体;
     font-size: 35px;
@@ -520,15 +450,13 @@ height: 150px;
     top: 340px;
     left: 50px;
 }
-
 .p-style6 {
     font-family: HGP行書体;
     font-size: 35px;
     position: absolute;
     top: 340px;
-    left: 330px;
+    left: 280px;
 }
-
 .p-style7 {
     font-family: HGP行書体;
     font-size: 35px;
@@ -538,7 +466,6 @@ height: 150px;
     left: 50px;
     z-index: -1;
 }
-
 .p-style8 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #FFEDB3;
@@ -547,7 +474,6 @@ height: 150px;
     top: 635px;
     left: 45px;
 }
-
 .p-style9 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #fff;
@@ -556,7 +482,6 @@ height: 150px;
     top: 630px;
     left: 137px;
 }
-
 .p-style10 {
     font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
     color: #FF0000;
@@ -565,14 +490,11 @@ height: 150px;
     top: 690px;
     left: 237px;
 }
-
 /* --sp-radio-------------------------------------------- */
-
 .radio-style {
     margin-top: 500px;
     margin-left: 30px;
 }
-
 input[type=radio]+label:before {
     content: "";
 /*     display: inline-block; */
@@ -582,29 +504,25 @@ input[type=radio]+label:before {
 /*      border: 6px solid white; */
 /*     box-sizing: border-box; */
 }
-
+/*
 input[type=radio][value="男性"]+label:before{
 background-image: url(male1.png);
 }
-
 input[type=radio][value="女性"]+label:before {
     background-image: url(male2.png);
 }
-
 input[type=radio][value="その他"]+label:before {
     background-image: url(female1.png);
 }
+ */
 
 input[type=radio]:checked+label::before {
     /* border: 6px solid white; */
-    background-image: url(/nomikai/img/object/circle2);
+    background-image: url(/nomikai/img/object/circle2.png);
     background-repeat: no-repeat;
     box-sizing: border-box;
 }
-
 input[type=radio] {
     display: none;
 }
-
 }
-

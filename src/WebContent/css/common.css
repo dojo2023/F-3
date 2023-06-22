@@ -1,6 +1,8 @@
 /*全ページ共通のcssファイル*/
 footer {
-
+	position: absolute;
+    bottom: 0;
+    margin-left: 15px;
 }
 
 .menu {
@@ -14,13 +16,11 @@ footer {
 }
 
 .menuText {
-        font-family: HGS行書体;
-        font-weight: bold;
-        font-size: 20px;
-        padding: 0 15px 0 15px;
-        margin-left: 10px;
-        margin-right: 10px;
 
+        font-family: メイリオ;
+        font-weight: normal;
+        font-size: 22px;
+        padding: 0 15px 0 15px;
 }
 
 .menuText:link {
