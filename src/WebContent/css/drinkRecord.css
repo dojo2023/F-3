@@ -351,8 +351,8 @@ body {
     top: 0
 }
 
-.container,
-a {
+.container
+ {
     display: flex
 }
 
@@ -382,10 +382,14 @@ button {
 }
 
 .invoice {
-    width: 275px;
-    border: 2px solid #000
-}
-
+    position: relative;
+    aspect-ratio: 2/3; /* 例として7:5の比率を指定 */
+    background-color: #f9f9f9;
+    padding: 2%;
+    font-family: HGP行書体;
+    white-space: nowrap;
+    border: 2px solid #000;
+  }
 .invoice:before {
     content: "";
     position: absolute;
@@ -395,7 +399,7 @@ button {
     height: calc(100% + 40px);
     background-color: #4d4747;
     border-radius: 10px;
-    z-index: -1
+    z-index: -1;
 }
 
 .invoice::after {
@@ -403,18 +407,20 @@ button {
     position: absolute;
     top: 0;
     left: 50%;
-    width: 150px;
-    height: 40px;
+    width: 54.55%;
+    height: 10.91%;
     background-color: #ccc;
     border-radius: 25%;
     z-index: 1;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
 }
+
+
 
 @media screen and (max-width: 768px) {
     .invoice {
         position: relative;
-        height: 55vmax;
+        height: auto;
         background-color: #f9f9f9;
         padding: calc(2% + 1vw);
         font-family: HGP行書体;
@@ -539,7 +545,8 @@ h1 {
     width: 100vw;
     background-image: url('/nomikai/img/backImage/totalRecodeBG.jpg');
     transition: top .5s ease-in-out;
-    z-index: 2
+    z-index: 2;
+    overflow-y: scroll;
 }
 
 .downContent.active {
@@ -588,10 +595,11 @@ label {
     border: 2px solid black;
     padding: 20px;
     width: 730px;
-    height: 220px;
+    height: 400px;
+    margin-left:4vw;
+    margin-right:4vw;
+    margin-bottom:4vw;
     background-color: white;
-    overflow-x: auto;
-    overflow-y: hidden;
     white-space: nowrap;
 }
 
@@ -637,5 +645,16 @@ a:active {
 }
 
 .h2margin {
-    margin-bottom: 15px;
+    margin-bottom: 15px
+}
+
+h3 {
+    display:inline-block
+}
+
+.height {
+    height: 100%;
+    width: 100vw;
+    overflow-y: scroll;
+    overflow-x: hidden
 }

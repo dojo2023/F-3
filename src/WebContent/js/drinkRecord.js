@@ -32,103 +32,184 @@ function changeText() {
 }
 
 function enableInputs() {
-    var input1 = document.getElementById("number");
-    var input2 = document.getElementById("drink");
-    var input3 = document.getElementById("eat");
-    var input4 = document.getElementById("cost");
+    const form = this.closest("form");
+    const inputs = form.querySelectorAll("input");
 
-    input1.disabled = false;
-    input2.disabled = false;
-    input3.disabled = false;
-    input4.disabled = false;
-  }
+    inputs.forEach((input) => {
+        input.disabled = false;
+    });
+}
 
-// サンプルデータ（仮定）
 const data = [
-  { No:"1", 食べた量:"5杯", 飲んだ量:"5杯", 料金:"5000円"},
-  { No:"2", 食べた量:"5杯", 飲んだ量:"5杯", 料金:"5000円"},
-  { No:"3", 食べた量:"5杯", 飲んだ量:"5杯", 料金:"5000円"},
-  // 他のデータ行
+    { No: "1", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
+    { No: "2", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
+    { No: "3", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
+    // 他のデータ行
 ];
+
+// 合計値を格納する変数
+let totalDrink = 0;
+let totalFood = 0;
+let totalPrice = 0;
+
+// データのループ処理
+for (let i = 0; i < data.length; i++) {
+    const record = data[i];
+    const drink = parseInt(record.飲んだ量);
+    const food = parseInt(record.食べた量);
+    const price = parseInt(record.料金);
+
+    // 合計値の計算
+    totalDrink += drink;
+    totalFood += food;
+    totalPrice += price;
+}
+
+// 合計値の表示
+document.getElementById("totalDrink").textContent = totalDrink;
+document.getElementById("totalFood").textContent = totalFood;
+document.getElementById("totalPrice").textContent = totalPrice;
+
+// アイコンの表示
+const maxIcons = 5; // 表示する最大のアイコン数
+
+const iconContainer = document.getElementById("BeerIcon-container");
+iconContainer.innerHTML = ""; // アイコンコンテナをクリア
+
+for (let i = 0; i < totalDrink; i++) {
+    if (i < maxIcons) {
+        const iconElement = document.createElement("img");
+        iconElement.src = "beer.png";
+        iconElement.alt = "icon";
+        iconElement.classList.add("icon");
+        iconContainer.appendChild(iconElement);
+    } else {
+        const plusElement = document.getElementById("plus");
+        if (!plusElement) {
+            const plusElement = document.createElement("h3");
+            plusElement.id = "plus";
+            plusElement.classList.add("span");
+            plusElement.textContent = "+" + (totalDrink - maxIcons);
+            iconContainer.appendChild(plusElement);
+        } else {
+            plusElement.textContent = "+" + (totalDrink - maxIcons);
+        }
+        break;
+    }
+}
+
+const iconContainer2 = document.getElementById("YakitoriIcon-container");
+iconContainer2.innerHTML = ""; // アイコンコンテナをクリア
+
+for (let i = 0; i < totalFood; i++) {
+    if (i < maxIcons) {
+        const iconElement = document.createElement("img");
+        iconElement.src = "yakitori.png";
+        iconElement.alt = "icon";
+        iconElement.classList.add("icon");
+        iconContainer2.appendChild(iconElement);
+    } else {
+        const plusYElement = document.getElementById("plusY");
+        if (!plusYElement) {
+            const plusYElement = document.createElement("h3");
+            plusYElement.id = "plusY";
+            plusYElement.classList.add("plusY");
+            plusYElement.textContent = "+" + (totalFood - maxIcons);
+            iconContainer2.appendChild(plusYElement);
+        } else {
+            plusYElement.textContent = "+" + (totalFood - maxIcons);
+        }
+        break;
+    }
+}
 
 // データを表示する関数
 function displayData() {
-  const list = document.querySelector(".splide__list");
+    const list = document.querySelector(".splide__list");
 
-  // 既存のデータ行を削除
-  list.innerHTML = "";
+    // 既存のデータ行を削除
+    list.innerHTML = "";
 
-  // データをループして新しい<li>要素を作成
-  data.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.classList.add("splide__slide", "container");
+    // データをループして新しい<li>要素を作成
+    data.forEach((item) => {
+        const listItem = document.createElement("li");
+        listItem.classList.add("splide__slide", "container");
 
-    const invoiceDiv = document.createElement("div");
-    invoiceDiv.classList.add("invoice");
+        const invoiceDiv = document.createElement("div");
+        invoiceDiv.classList.add("invoice");
 
-    const heading = document.createElement("h2");
-    heading.classList.add("line1", "slip");
-    heading.textContent = "御会計表";
-    invoiceDiv.appendChild(heading);
+        const heading = document.createElement("h2");
+        heading.classList.add("line1", "slip");
+        heading.textContent = "御会計表";
+        invoiceDiv.appendChild(heading);
 
-    const form = document.createElement("form");
-    form.action = "#";
-    form.method = "post";
+        const form = document.createElement("form");
+        form.action = "#";
+        form.method = "post";
 
-    // 各データ項目ごとに<div>要素を作成
-    for (const key in item) {
-      const dataGroup = document.createElement("div");
-      dataGroup.classList.add("form-group");
+        // 各データ項目ごとに<div>要素を作成
+        for (const key in item) {
+            const dataGroup = document.createElement("div");
+            dataGroup.classList.add("form-group");
 
-      const label = document.createElement("label");
-      label.setAttribute("for", key);
-      label.textContent = key + "：";
+            const label = document.createElement("label");
+            label.setAttribute("for", key);
+            label.textContent = key + "：";
 
-      const input = document.createElement("input");
-      input.type = "text";
-      input.id = key;
-      input.name = key;
-      input.value = item[key];
-      input.disabled = true;
+            const input = document.createElement("input");
+            input.type = "text";
+            input.id = key;
+            input.name = key;
+            input.value = item[key];
+            input.disabled = true;
+            input.required = true;
 
-      dataGroup.appendChild(label);
-      dataGroup.appendChild(input);
-      form.appendChild(dataGroup);
+            dataGroup.appendChild(label);
+            dataGroup.appendChild(input);
+            form.appendChild(dataGroup);
+        }
+
+        const buttonGroup = document.createElement("div");
+        buttonGroup.classList.add("buttonA");
+
+        const editButton = document.createElement("button");
+        editButton.type = "button";
+        editButton.classList.add("buttonB");
+        editButton.textContent = "編集";
+        editButton.addEventListener("click", enableInputs);
+
+        const deleteButton = document.createElement("button");
+        deleteButton.type = "button";
+        deleteButton.classList.add("buttonB");
+        deleteButton.textContent = "削除";
+
+        buttonGroup.appendChild(editButton);
+        buttonGroup.appendChild(deleteButton);
+
+        form.appendChild(buttonGroup);
+        invoiceDiv.appendChild(form);
+        listItem.appendChild(invoiceDiv);
+        list.appendChild(listItem);
+    });
+
+    function enableInputs() {
+        const form = this.closest("form");
+        const inputs = form.querySelectorAll("input");
+
+        inputs.forEach((input) => {
+            input.disabled = false;
+        });
     }
 
-    const buttonGroup = document.createElement("div");
-    buttonGroup.classList.add("buttonA");
-
-    const editButton = document.createElement("button");
-    editButton.type = "button";
-    editButton.classList.add("buttonB");
-    editButton.textContent = "編集";
-    editButton.addEventListener("click", enableInputs);
-
-    const deleteButton = document.createElement("button");
-    deleteButton.type = "button";
-    deleteButton.classList.add("buttonB");
-    deleteButton.textContent = "削除";
-
-    buttonGroup.appendChild(editButton);
-    buttonGroup.appendChild(deleteButton);
-
-    form.appendChild(buttonGroup);
-    invoiceDiv.appendChild(form);
-    listItem.appendChild(invoiceDiv);
-    list.appendChild(listItem);
-  });
-
-  // Splide スライダーの初期化
-  new Splide('.splide', {
-    perPage: 1,
-    gap: 10,
-    type: 'loop',
-    pagination: true,
-    keyboard: true,
-  }).mount();
+    // Splide スライダーの初期化
+    new Splide('.splide', {
+        perPage: 1,
+        gap: 10,
+        type: 'loop',
+        pagination: true,
+        keyboard: true,
+    }).mount();
 }
 
 // ページ読み込み時にデータを表示
 window.addEventListener("load", displayData);
-
