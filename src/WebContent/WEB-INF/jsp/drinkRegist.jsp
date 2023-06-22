@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>s
 <html lang="ja">
 
 <head>
@@ -259,17 +260,9 @@
              <tr>
                 <td>
                     <div id="friendsListMobile" class="box-style-mobile">
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
-                        <input type="checkbox" name="" id="">こんにちは<br>
+                      <c:forEach var="e" items="${cardList}" >
+                        <input type="checkbox" name="" id="">${e.name}<br>
+                      </c:forEach>
                     </div>
                 </td>
             </tr>
@@ -284,71 +277,12 @@
                         <!-- スライドを囲む要素（必須） -->
                         <div class="swiper-wrapper">
                             <!-- スライド要素（必須） -->
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon1.png" alt="">
-                                <p>icon1</p>
-                            </div>
+                            <c:forEach var="e" items="${cardList}">
                             <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon2.png" alt="">
-                                <p>icon2</p>
+                                <img src="${e.avator}" alt="">
+                                <p>${e.name}</p>
                             </div>
-                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon3.png" alt="">
-                                <p>icon3</p>
-                            </div>
-                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon4.png" alt="">
-                                <p>icon4</p>
-                            </div>
-                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon5.png" alt="">
-                                <p>icon5</p>
-                            </div>
-                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon6.png" alt="">
-                                <p>icon6</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon7.png" alt="">
-                                <p>icon7</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon8.png" alt="">
-                                <p>icon8</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon9.png" alt="">
-                                <p>icon9</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon10.png" alt="">
-                                <p>icon10</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon11.png" alt="">
-                                <p>icon11</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon12.png" alt="">
-                                <p>icon12</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon13.png" alt="">
-                                <p>icon13</p>
-                            </div>
-                            <div class="swiper-slide"
-                                style="width: 100px; height: 120px; background-color: inherit; border: none;">
-                                <img src="/nomikai/img/icon/icon14.png" alt="">
-                                <p>icon14</p>
-                            </div>
+                            </c:forEach>
 
                         </div>
                         <!-- ナビゲーションボタン要素（省略可能） -->

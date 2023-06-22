@@ -33,37 +33,32 @@ public class FriendsDAO {
 			// 結果表をコレクションにコピーする
 			while (rs.next()) {
 				Friends card = new Friends(
-				rs.getInt("NUMBER"),
-				rs.getString("NAME"),
-				rs.getInt("VIVITTIME"),
-				rs.getString("AVATAR")
-				);
+						rs.getInt("NUMBER"),
+						rs.getString("NAME"),
+						rs.getInt("VISITTIMES"),
+						rs.getString("AVATOR"));
 				cardList.add(card);
 			}
 
-		}
-		catch (SQLException e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 			cardList = null;
-		}
-		catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 			cardList = null;
-		}
-		finally {
+		} finally {
 			// データベースを切断
 			if (conn != null) {
 				try {
 					conn.close();
-				}
-				catch (SQLException e) {
+				} catch (SQLException e) {
 					e.printStackTrace();
 					cardList = null;
 				}
 
-	}
-  }
+			}
+		}
 		// 結果を返す
 		return cardList;
- }
+	}
 }

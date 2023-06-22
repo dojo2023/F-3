@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -8,6 +9,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import dao.FriendsDAO;
+import model.Friends;
 
 /**
  * Servlet implementation class drinkRegistServlet
@@ -22,6 +26,13 @@ public class DrinkRegistServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		// friendsテーブルのすべてのデータを取得 (実際に使用するのはname列のみ)
+		// チェックボックスに名前を表示するため
+		FriendsDAO fDao = new FriendsDAO();
+		List<Friends> cardList = fDao.select();
+
+		// 検索結果をリクエストスコープに格納する
+		request.setAttribute("cardList", cardList);
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRegist.jsp");
 		dispatcher.forward(request, response);
 	}
