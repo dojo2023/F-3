@@ -233,7 +233,7 @@
                 </td>
                 <td>
                     <div class="result-style" style="padding: 0;">
-                        <input id="moneyInput" type="text" class="fonts account-input" name="MONEY">
+                        <input id="moneyInput" type="text" class="fonts account-input" name="MONEY" value="0">
                         <span class="fonts account-en">円</span>
                     </div>
                 </td>
@@ -294,7 +294,7 @@
                 <td style="padding: 0 20px;"></td>
             </tr>
         </table>
-        <button type="button" class="fonts label-style"
+        <button type="submit" class="fonts label-style"
             style="margin: auto; display: block; height: 40px; width: 100px;">登録</button>
     </form>
 
@@ -309,16 +309,46 @@
               <input type="text" name="" id=""><br>
             <p>アイコンを選択してください</p>
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(1)">
-              <img id="img1" class="registBoxImg" src="/nomikai/img/icon/icon11.png" alt="">
+              <img id="img1" class="registBoxImg" src="/nomikai/img/icon/icon1.png" alt="">
             </button>
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(2)">
-              <img id="img2" class="registBoxImg" src="/nomikai/img/icon/icon12.png" alt="">
+              <img id="img2" class="registBoxImg" src="/nomikai/img/icon/icon2.png" alt="">
             </button>
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(3)">
-              <img id="img3" class="registBoxImg" src="/nomikai/img/icon/icon13.png" alt="">
+              <img id="img3" class="registBoxImg" src="/nomikai/img/icon/icon3.png" alt="">
             </button>
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(4)">
-              <img id="img4" class="registBoxImg" src="/nomikai/img/icon/icon14.png" alt="">
+              <img id="img4" class="registBoxImg" src="/nomikai/img/icon/icon4.png" alt="">
+            </button><br>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(5)">
+              <img id="img5" class="registBoxImg" src="/nomikai/img/icon/icon5.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(6)">
+              <img id="img6" class="registBoxImg" src="/nomikai/img/icon/icon6.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(7)">
+              <img id="img7" class="registBoxImg" src="/nomikai/img/icon/icon7.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(8)">
+              <img id="img8" class="registBoxImg" src="/nomikai/img/icon/icon8.png" alt="">
+            </button><br>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(9)">
+              <img id="img9" class="registBoxImg" src="/nomikai/img/icon/icon9.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(10)">
+              <img id="img10" class="registBoxImg" src="/nomikai/img/icon/icon10.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(11)">
+              <img id="img11" class="registBoxImg" src="/nomikai/img/icon/icon11.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(12)">
+              <img id="img12" class="registBoxImg" src="/nomikai/img/icon/icon12.png" alt="">
+            </button><br>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(13)">
+              <img id="img13" class="registBoxImg" src="/nomikai/img/icon/icon13.png" alt="">
+            </button>
+            <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(14)">
+              <img id="img14" class="registBoxImg" src="/nomikai/img/icon/icon14.png" alt="">
             </button>
             <button type="button" class="newFriendRegistBtn">登録する</button>
         </div>

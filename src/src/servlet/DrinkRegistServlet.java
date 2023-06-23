@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.DrinkDAO;
 import dao.FriendsDAO;
+import model.Drink;
 import model.Friends;
 
 /**
@@ -48,6 +50,18 @@ public class DrinkRegistServlet extends HttpServlet {
 		Integer drink = Integer.parseInt(request.getParameter("DRINK"));
 		Integer eat = Integer.parseInt(request.getParameter("EAT"));
 		Integer money = Integer.parseInt(request.getParameter("MONEY"));
+
+		// 検索処理を行う
+		DrinkDAO dDao = new DrinkDAO();
+		// データが挿入できたかどうか
+		boolean insertDataCheck = dDao.insert(new Drink(drink, eat, money));
+
+		// 検索結果をリクエストスコープに格納する
+		request.setAttribute("insertDataCheck", insertDataCheck);
+
+		// 結果ページにフォワードする
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRegist.jsp");
+		dispatcher.forward(request, response);
 
 	}
 

@@ -47,8 +47,8 @@ function btnCount(i) {
                 eatMob = 0;
             }
             else {
-                document.getElementById('money').value = ``;
-                document.getElementById('moneyInput').value = ``;
+                document.getElementById('money').value = `0`;
+                document.getElementById('moneyInput').value = `0`;
             }
         }
 
@@ -158,3 +158,16 @@ function btnCount(i) {
                 list.style.display = `none`;
             }
         })
+
+        // 飲食金額入力フォームがフォーカスされたらデフォルトで表示されているを消す
+        let moneyInput = document.querySelector(`input[type="text"]`);
+        let Input = document.getElementById('moneyInput');
+        Input.addEventListener(`focus`, function() {
+           console.log('aaaaa');
+           document.getElementById('moneyInput').value = ``;
+        });
+
+        Input.addEventListener(`blur`, function() {
+           console.log('aaaaa');
+           document.getElementById('moneyInput').value = `0`;
+        });

@@ -39,8 +39,8 @@ public class DrinkDAO {
 			}
 			if (param.getEat() != 0) {
 				pStmt.setString(3, "%" + param.getEat() + "%");
-				} else {
-					pStmt.setString(3, "%");
+			} else {
+				pStmt.setString(3, "%");
 			}
 			if (param.getAccount() != 0) {
 				pStmt.setString(4, "%" + param.getAccount() + "%");
@@ -115,6 +115,8 @@ public class DrinkDAO {
 
 			// SQL文を準備する
 			String sql = "INSERT INTO Drink VALUES (?, ?, ?, ?, ?, ?, ?)";
+			// String sql = "insert into Drink values(?, ?, ?, ?, ?, ?)";
+			// 4:年齢, 5:性別, 6:登録日 -> 自動取得
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる

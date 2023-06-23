@@ -1,0 +1,146 @@
+/* ユーザ情報テーブル 
+* テーブル物理名:userInfo
+*/
+
+/* アプリケーションで使用する人はKameiさんとする */
+
+JDBCドライバ
+Class.forName("org.h2.Driver");
+
+JDBCURL
+conn = DriverManager.getConnection("jdbc:h2:file:C:");
+
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL PRIMARY KEY,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+)
+
+/* 元のパスワード */
+　１：いなとみし
+　２：あらかわるいえもん
+　３：おおさかしでんはんかいせん
+　４：こくすいけん
+　５：ジェイ・アルバム
+　６：えすじーだぶりゅーはいちゅうようせん
+　７：みゅーじっくしてぃてんじん
+　８：まえきたみやこ
+　９：とらんすぺないん・えくすぷれす
+１０：なかむらひでお
+
+
+
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Higuchi', '002bed5747195abd9fb249ab4669d4e3', 18000, 70, '女');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Kitano', '62a1785360f3cb7104da4187996f20da', 10000, 25, '女');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Hukuoka', '73346614432aa5229ffb0c7cfd42bf8f', 13000, 72, 'その他');
+
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Kamei', '06d431b0e624a38be8459a635ea8e320', 20000, 57, '男');
+
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Takashima', '8b95d86f221ffc48936fa3f88999d954', 7000, 28, '男');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Morisita', 'f57ccbb6cfd8ced9a9babd848d4dbf49', 10000, 36, '女');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Takamatsu', '274f0869e4f7333c7a4e63935eb13422', 11000, 37, '男');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Saito', '1f607f9838b3c533e5b33e9c3c1dac0e', 6000, 46, '男');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Wada', '7786d5b9ac383d519469f4aebb8624cb', 14000, 33, '女');
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Okabe', 'cbcc85e2095a40bd4f37dfd35617c284', 9000, 39, 'その他');
+
+
+/* 6月22日　kameiさんの上限金額を17000円から20000円に変更 */
+UPDATE userInfo SET max = 20000 WHERE name LIKE 'Kamei';
+
+----------------------------------------------------------------
+
+/* 飲み会データテーブル 
+* テーブル物理名:nomiInfo
+* registDataはデータを登録した時間を自動取得する
+*/
+
+CREATE TABLE nomiInfo(
+  number int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  drink int NOT NULL,
+  eat int NOT NULL,
+  account int NOT NULL,
+  age int NOT NULL,
+  gender varchar(3) NOT NULL,
+  registData date
+)
+
+/* 年齢、性別、登録日は自動取得 */
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(5, 7, 2144, 57, '男', CURDATE());
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(9, 9, 3318, 57, '男', CURDATE());
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(4, 5, 3970, 57, '男', CURDATE());
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(4, 6, 2147, 57, '男', CURDATE());
+
+/* 6月22日追加 */
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(2, 3, 1700, 57, '男', CURDATE());
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(3, 5, 2323, 57, '男', CURDATE());
+INSERT INTO nomiInfo(drink, eat, account, age, gender, registData) 
+VALUES(1, 2, 1398, 57, '男', CURDATE());
+
+※あと3000円分のデータを登録したらおばちゃんの警告画面が出るように
+調整してあります。
+----------------------------------------------------------------
+
+/*
+* 友達データテーブル
+* テーブル物理名:friends
+* avatarは画像パスを記述
+*/
+
+CREATE TABLE friends(
+  numberint NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name varchar(30) NOT NULL,
+  visitTimes int NOT NULL,
+  avatar varchar(255) NOT NULL
+)
+
+
+INSERT INTO friends (name, visitTimes, avator) VALUES('ようこ', 4, '/nomikai/img/icon/icon7.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('大原', 4, '/nomikai/img/icon/icon12.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('タモリ', 1, '/nomikai/img/icon/icon6.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('ナオヤ', 4, '/nomikai/img/icon/icon2.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('香澄', 10, '/nomikai/img/icon/icon3.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('響', 5, '/nomikai/img/icon/icon1.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('ぽたぽた', 10, '/nomikai/img/icon/icon9.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('れん', 4, '/nomikai/img/icon/icon5.png');
+INSERT INTO friends (name, visitTimes, avator) VALUES('みかん', 2, '/nomikai/img/icon/icon13.png');
+INSERT INTO friends (visitTimes, avator) VALUES('寅さん', 1, '/nomikai/img/icon/icon8.png');
+
+----------------------------------------------------------------
+
+/* ルーレットテーブル */
+CREATE TABLE roulette(
+  number int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name String NOT NULL
+)
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -427,7 +427,7 @@
             /* 新規友達登録ウィンドウ */
             /* ウィンドウスタイル定義 */
             .registBox {
-                height: 280px;
+                height: 380px;
                 width: 300px;
                 border: 2px solid red;
                 background-color: aqua;

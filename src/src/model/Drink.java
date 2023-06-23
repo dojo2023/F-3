@@ -1,15 +1,16 @@
 package model;
+
 import java.io.Serializable;
 import java.util.Date;
 
 public class Drink implements Serializable {
-	private int number ;
-	private int drink ;
-	private int eat ;
-	private int account ;
-	private int age ;
-	private String gender ;
-	private Date registDate ;
+	private int number;
+	private int drink;
+	private int eat;
+	private int account;
+	private int age;
+	private String gender;
+	private Date registDate;
 
 	public Drink(int number, int drink, int eat, int account, int age, String gender, Date registDate) {
 		this.number = number;
@@ -29,6 +30,13 @@ public class Drink implements Serializable {
 		this.age = 0;
 		this.gender = "";
 		this.registDate = new Date();
+	}
+
+	// insert専用のコンストラクタ定義
+	public Drink(int drink, int eat, int account) {
+		this.drink = drink;
+		this.eat = eat;
+		this.account = account;
 	}
 
 	public int getNumber() {
