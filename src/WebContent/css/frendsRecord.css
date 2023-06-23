@@ -24,7 +24,10 @@ body{
 
 .size2{
   font-size: 20px;
+}
 
+.big{
+	font-size:30px;
 }
 
 .img-style {
@@ -32,9 +35,6 @@ body{
   border-radius: 50%;
 }
 
-.big{
-  font-size: 30px;
-}
 
 .small{
   font-size: 28px;
@@ -51,18 +51,18 @@ body{
 
 @media only screen and (max-width : 390px){
 
-.for-pc { 
-display:none;      
+.for-pc {
+display:none;
 }
 
-.for-sp { 
+.for-sp {
  display:block;
 }
 
 }
 
 .img{
-  background-image: url(../img/backImage/frienddata3.png);  
+  background-image: url(../img/backImage/frienddata3.png);
   /*background-position: center;*/
   background-size: cover;
   width: 100%;
@@ -75,7 +75,7 @@ display:none;
 @media (max-width: 950px) {
   .img-opacity {
     opacity: 0.7;
-  }       
+  }
 }
 
 .img::before{
@@ -83,3 +83,14 @@ display:none;
   display: block;
   padding-top: 50%;
 }
+
+.nameWrapper {
+  font-size:20px;
+}
+
+#friends{
+	display:flex;
+	flex-wrap: wrap;
+	margin-top:20px;
+}
+

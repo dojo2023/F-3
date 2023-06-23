@@ -22,7 +22,8 @@
 
         <div class="a">
           <h1 style="line-height: 60px;">いらっしゃいませ<br>お名前をお伺いいたします。</h1>
-          <input type="text" name="id" placeholder="IDを入力してください" size="50" class="id"><br>
+          
+          <input type="text" name="id" placeholder="IDを入力してください" size="50" class="id" ><br>
           <h1>合言葉はお持ちですか？</h1>
           <input type="password" name="pw" placeholder="パスワードを入力してください" size="50" class="pw">
           <br>
