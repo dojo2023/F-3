@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>友達メニュー</title>
     <link rel="stylesheet" type="text/css" href="css/frendsRecord.css">
+    <link href="/nomikai/css/common.css" rel="stylesheet">
  </head>
 <!-- <body background="../img/backImage/frienddata3.png" background-size:100%auto> -->
  <body>
@@ -194,14 +195,24 @@
    </div>
 
    <a href="menu.jsp">
-     <img src="img/object/bell3.png"alt="bell" height="150px" width="125px" style="display: block; position: absolute; bottom: 5%; left: 3%;">
+     <img src="img/object/bell3.png"alt="bell" height="150px" width="125px" style="display: block; position: absolute; bottom: 15%; left: 3%;">
    </a>
    <a href="#" onclick="history.forward()">
-     <img src="img/object/sannkaku.png"alt="tugi" height="150px" width="250px" style="display: block; position: absolute; bottom: 3%; left:15%;">
+     <img src="img/object/sannkaku.png"alt="tugi" height="150px" width="250px" style="display: block; position: absolute; bottom: 13%; left:15%;">
    </a>
    </div>
 
-
+<footer>
+    <ul class="menu">
+        <li class="menuBar">
+            <a href="/nomikai/DrinkRegistServlet" class="menuText">&#127867;飲み会登録</a>
+            <a href="/nomikai/DrinkServlet" class="menuText">&#129534;データ閲覧</a><br>
+            <hr>
+            <a href="/nomikai/FriendsRecordServlet" class="menuText">&#129309;呑み友一覧</a>
+            <a href="/nomikai/EditServlet" class="menuText">&#9881;&#65039;設定</a>
+        </li>
+    </ul>
+</footer>
 
  </div>
 
