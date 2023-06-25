@@ -2,7 +2,10 @@
 * テーブル物理名:userInfo
 */
 
-/* アプリケーションで使用する人はKameiさんとする */
+/* 
+*アプリケーションで使用する人はKameiさんとする 
+* userID:Kamei userPW:こくすいけん
+*/
 
 JDBCドライバ
 Class.forName("org.h2.Driver");

@@ -306,8 +306,10 @@
               <img src="/nomikai/img/object/x.svg" alt="">
             </button>
             <p>名前を入力してください</p>
-              <input type="text" name="" id=""><br>
+              <input type="text" name="REGISTNAME" id=""><br>
             <p>アイコンを選択してください</p>
+            <!-- 選択した画像を識別する -->
+            <input id="imgSelect" type="hidden" name="imgSelect" value="0">
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(1)">
               <img id="img1" class="registBoxImg" src="/nomikai/img/icon/icon1.png" alt="">
             </button>

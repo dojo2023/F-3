@@ -132,6 +132,8 @@ function btnCount(i) {
             let img = document.getElementById('img' + i);
             img.classList.add('imgCircleBoeder');
             temp = i;
+            let imgSelect = document.getElementById('imgSelect');
+            imgSelect.value = temp;
         }
 
         // 丸を削除

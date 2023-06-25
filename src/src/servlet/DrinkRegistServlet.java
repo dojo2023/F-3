@@ -47,6 +47,7 @@ public class DrinkRegistServlet extends HttpServlet {
 			throws ServletException, IOException {
 		// リクエストパラメータの受け取り
 		request.setCharacterEncoding("UTF-8");
+		// 飲み会データ
 		Integer drink = Integer.parseInt(request.getParameter("DRINK"));
 		Integer eat = Integer.parseInt(request.getParameter("EAT"));
 		Integer money = Integer.parseInt(request.getParameter("MONEY"));
