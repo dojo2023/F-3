@@ -145,3 +145,80 @@
             font-size: 25px;
             max-width: 150px;
         }
+
+        /* ここからルーレットのcss */
+                :root {
+            --rotateS: 0deg;
+            --rotateE: 1080deg;
+        }
+
+
+        .btnStyle {
+            height: 40px;
+            width: 150px;
+            margin: auto;
+            margin-top: 10px;
+            display: block;
+        }
+
+        /* 扇形 */
+        .shape {
+            margin: auto;
+            width: 400px;
+            height: 400px;
+            /* degに 360 / 入力された人数 の値を代入 */
+            /* すべて合わせてルーレットのマスにする */
+            /* background-image: conic-gradient(rgb(22, 97, 227) 45deg, white 45deg); */
+            background-image: conic-gradient(red 0deg 72deg, orange 72deg 144deg, yellow 144deg 216deg, green 216deg 288deg, blue 288deg 360deg);
+            clip-path: circle();
+        }
+
+        /* ルーレット上部の矢印 */
+        .arrow-clippath {
+            position: absolute;
+            display: inline-block;
+            top: 0px;
+            left: 185px;
+            width: 30px;
+            height: 50px;
+            background-color: #00fddf;
+            clip-path: polygon(50% 100%, 0 0, 100% 0);
+            z-index: 1;
+        }
+
+        .outlineStyle {
+            height: 400px;
+            width: 400px;
+            position: relative;
+            border-radius: 50%;
+            border: 3px solid black;
+            margin: auto;
+        }
+
+/*下からフェードイン*/
+ .rouletteWrapper {
+margin-top: -97%;
+margin-left: 15%;
+margin-right: 15%;
+padding: 15px 100px 15px 100px;
+background: rgba(20, 20, 20, 0.75);
+   animation-name: fadein-bottom;
+   animation-duration: 0.5s;
+   animation-timing-function: ease-out;
+   animation-fill-mode: forwards;
+}
+
+@keyframes fadein-bottom {
+   0% {
+      opacity: 0;
+      transform: translateY(20px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+.rouletteNon {
+	display: none;
+}
