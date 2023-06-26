@@ -14,8 +14,8 @@ JDBCURL
 conn = DriverManager.getConnection("jdbc:h2:file:C:");
 
 CREATE TABLE userInfo(
-  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
-  userID varchar(30) NOT NULL PRIMARY KEY,
+  number int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  userID varchar(30) NOT NULL,
   userPW varchar(60) NOT NULL,
   max int,
   age int,
@@ -23,41 +23,48 @@ CREATE TABLE userInfo(
 )
 
 /* 元のパスワード */
-　１：いなとみし
-　２：あらかわるいえもん
-　３：おおさかしでんはんかいせん
-　４：こくすいけん
-　５：ジェイ・アルバム
-　６：えすじーだぶりゅーはいちゅうようせん
-　７：みゅーじっくしてぃてんじん
-　８：まえきたみやこ
-　９：とらんすぺないん・えくすぷれす
-１０：なかむらひでお
+1:inatomisi
+2:arakawaruiemon
+3:oosakasidenhankaisen
+4:kokusuiken
+5:j_album
+6:sgwhaityuyosen
+7:musiccitytenzin
+8:maekitamiyako
+9:toransupenain_express
+10:nakamurahideo
 
 
 
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Higuchi', '53656099f980ef606efc9725d7af5003', 18000, 70, '女');
-INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Kitano', '48cae6c8ad54df67550e1a611abf77e0', 10000, 25, '女');
-INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Hukuoka', '8b03a7bf5cbf8831458c08fc57348b6c', 13000, 72, 'その他');
+VALUES('Higuchi', 'a3b9434a7f5f0fccc6edab665ec976ea', 18000, 70, '女');
 
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Kamei', '9b2ed7d75f08c848ddb1771ba6c3a22c', 20000, 57, '男');
+VALUES('Kitano', '07bfb68598384709af619fbe00c10c8f', 10000, 25, '女');
 
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Takashima', '0ba9184945aa5b12e06de15558ef169d', 7000, 28, '男');
+VALUES('Hukuoka', '00e6c31021bb48a93c6d33de561ec208', 13000, 72, 'その他');
+
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Morisita', 'e28350b9ec0e34187e32199705f7736e', 10000, 36, '女');
+VALUES('Kamei', '170798fe3c58046eba47a9258b792d00', 20000, 57, '男');
+
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Takamatsu', '3643737d159d5adac7de435f9a195073', 11000, 37, '男');
+VALUES('Takashima', 'd1c6887839b80f7476282eeca98ab2ec', 7000, 28, '男');
+
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Saito', 'f7184b88f79faac87b93d3853111a0e5', 6000, 46, '男');
+VALUES('Morisita', '90b156cf2151404d9c545f2a808bdbaa', 10000, 36, '女');
+
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Wada', '72dc4ba0fd9e6ddaa73cbc9cffa5f0d0', 14000, 33, '女');
+VALUES('Takamatsu', 'c72dbcc548be474707cf61791ea9be78', 11000, 37, '男');
+
 INSERT INTO userInfo(userID, userPW, max, age, gender) 
-VALUES('Okabe', '48e74f4352f1bd14ca321976408efdd1', 9000, 39, 'その他');
+VALUES('Saito', '823d8f7124a122cf8093c2446b5505ea', 6000, 46, '男');
+
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Wada', '554210f9c79d0ca64d9396b8843b0223', 14000, 33, '女');
+
+INSERT INTO userInfo(userID, userPW, max, age, gender) 
+VALUES('Okabe', 'a7ad1ec88d2cad249b54a8bfbc669ddc', 9000, 39, 'その他');
 
 
 /* 6月22日　kameiさんの上限金額を17000円から20000円に変更 */

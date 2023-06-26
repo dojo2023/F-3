@@ -1375,3 +1375,78 @@ Caused by: java.lang.IllegalStateException: The file is locked: nio:C:/dojo6/DB/
 	at org.h2.mvstore.FileStore.open(FileStore.java:172)
 	at org.h2.mvstore.MVStore.<init>(MVStore.java:390)
 	... 44 more
+2023-06-26 10:40:24 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL PRIMARY KEY,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-26 10:40:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL PRIMARY KEY,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL PRIMARY KEY,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
+2023-06-26 10:41:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: SQLステートメントに文法エラーがあります "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; 期待されるステートメント "HASH, ("
+Syntax error in SQL statement "CREATE TABLE USERINFO(
+  NUMBER INT NOT NULL, AUTO_INCREMENT, PRIMARY KEY,[*]
+  USERID VARCHAR(30) NOT NULL,
+  USERPW VARCHAR(60) NOT NULL,
+  MAX INT,
+  AGE INT,
+  GENDER VARCHAR(3)
+)"; expected "HASH, ("; SQL statement:
+CREATE TABLE userInfo(
+  number int NOT NULL, AUTO_INCREMENT, PRIMARY KEY,
+  userID varchar(30) NOT NULL,
+  userPW varchar(60) NOT NULL,
+  max int,
+  age int,
+  gender varchar(3)
+) [42001-200]
