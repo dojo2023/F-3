@@ -1,12 +1,22 @@
 @charset "UTF-8";
 
 	body {
-		background: rgba(20, 20, 20, 0.9);
+		animation: bgchange 1s ease infinite;
+		margin-top: 25%;
 	}
 
+	@keyframes bgchange{
+      0%   {background: black;}
+      13%  {background:  darkred;}
+	  25%  {background: crimson;}
+	  50%  {background: red;}
+	  63%  {background: crimson;}
+      75%  {background: darkred;}
+	  100%  {background: black;}
+ }
 	.mainContent {
 		margin: 10px 0 10px 0;
-		background: crimson;
+		background: rgba(20, 20, 20, 0.85);
 }
 	.obachan {
 		margin: 20px auto 20px 0;
@@ -27,39 +37,100 @@
 		0%   { transform:translate(0%, 60px) rotateX(50deg); }
 		100% { transform:translate(0%, 0%); }
 	}
+	#btn {
+		float: right;
+		position: absolute;
+		bottom: 30%;
+		left: 80%;
+	}
 
+	.warning {
+			padding-top: 50px;
+			font-size: 60px;
+			text-align: center;
+			color: white;
+	}
 	.angryText {
-		font-family: sans-serif;
-		font-size: 40px;
+		font-family: MS Mincho;
+		font-size: 60px;
 		font-weight: bold;
-		color: black;
+		color: white;
 		margin-top: 0;
-		padding:0 10% 0 10%;
+		padding:0px 50px 0px 50px;
 		text-align-last: justify;
 	}
 
-	.banner {
+	.banner1 {
+		margin-bottom: 20px;
 		background: gold;
 		width:100%;
 		overflow: hidden;
+		rotate: -10deg;
+		border: 3px solid black;
 	}
 
-	.textTop{
+	.banner2 {
+		background: gold;
+		width:100%;
+		overflow: hidden;
+		rotate: 8deg;
+		border: 3px solid black;
+	}
+
+	.banner3 {
+		margin-bottom: 20px;
+		background: gold;
+		width:100%;
+		overflow: hidden;
+		rotate: 5deg;
+		border: 3px solid black;
+	}
+
+	.banner4 {
+		background: gold;
+		width:100%;
+		overflow: hidden;
+		rotate: -8deg;
+		border: 3px solid black;
+	}
+
+	.textTop1{
 		margin:0 0 0 0;
-		font-size: 30px;
+		padding: 5px 0 5px 0;
+		font-size: 25px;
 		color: black;
 		font-weight: bold;
 		animation: flowing 10s linear infinite;
-		transform: translateX(100%);/*初期位置*/
+		transform: translateX(90%);/*初期位置*/
+	}
+	.textTop2{
+		margin:0 0 0 0;
+		padding: 5px 0 5px 0;
+		font-size: 25px;
+		color: black;
+		font-weight: bold;
+		animation: flowing 10s linear infinite;
+		transform: translateX(110%);/*初期位置*/
 	}
 
-	.textBottom{
+	.textBottom1{
 		margin:0 0 0 0;
-		font-size: 30px;
+		padding:  5px 0 5px 0;
+		font-size: 25px;
 		color: black;
 		font-weight: bold;
 		animation: flowing 12s linear infinite;
-		transform: translateX(120%);/*初期位置*/
+		transform: translateX(120%); /*初期位置*/
+	}
+
+	.textBottom2{
+		margin:0 0 0 0;
+		padding:  5px 0 5px 0;
+		font-size: 25px;
+		color: black;
+		font-weight: bold;
+		animation: flowing 12s linear infinite;
+		transform: translateX(100%); /*初期位置*/
 	}
 
 	@keyframes flowing {
@@ -67,3 +138,20 @@
 		transform: translateX(-100%);
 	}
 }
+
+#btn {
+	color: white;
+	font-size: 40px;
+	padding: 100px 20px 100px 20px;
+	border: 5px solid white;
+	position: fixed;
+	left: 70%;
+	bottom: 25%;
+	animation: btnchange 1s ease infinite;
+}
+
+@keyframes btnchange{
+      0%   {background: black;}
+      50%  {background: rgb(59, 59, 59);}
+	  100%   {background: black;}
+ }

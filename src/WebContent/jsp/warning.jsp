@@ -12,7 +12,7 @@
 <body>
 	<div class="audio_wrap">
 		<audio controls>
-			<source src="sound.mp3">
+			<source src="/nomikai/audio/sound.mp3">
 		</audio>
 	</div>
 
@@ -31,7 +31,7 @@
 		<p class="angryText">あんた！！</p>
 		<p class="angryText">使いすぎもええ加減に</p>
 		<p class="angryText">しいや！！</p>
-		<div class="obachan animation"><img src="obachan.png" width=650px></div>
+		<div class="obachan animation"><img src="/nomikai/img/object/obachan.png" width=650px></div>
 
 		<form>
 			<a id="js" href="#"><input type="button" value="▶許して！" id="btn" onClick="sorry()"></a>
@@ -58,13 +58,13 @@
 		if (rand <= 6) {
 		msg = "許しまへん！";
 		alert(msg);
-		location.href = "login.html"; //ログイン画面へ
+		location.href = "/nomikai/LoginServlet"; //ログイン画面へ
 		}
 
 		else {
 		msg = "許します！";
 		alert(msg);
-		location.href = "menu.html"; //メニュー画面へ
+		location.href = "/nomikai/MenuServlet"; //メニュー画面へ
 		}
 
 		}
