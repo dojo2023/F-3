@@ -4,7 +4,7 @@
 
 /* 
 *アプリケーションで使用する人はKameiさんとする 
-* userID:Kamei userPW:こくすいけん
+* userID:Kamei userPW:kokusuiken
 */
 
 JDBCドライバ
