@@ -10,7 +10,7 @@ import model.User;
 
 public class UserDAO {
 	// ログインできるならtrueを返す
-	public boolean isLoginOK(User idpw) {
+	public boolean isLoginOK(String id,String pw) {
 		Connection conn = null;
 		boolean loginResult = false;
 
@@ -23,21 +23,30 @@ public class UserDAO {
 
 			// SELECT文を準備する
 			// ? は値を差し込む場所
-			String sql = "select count(*) from USERINFO where userid = ? and userpw = ?";
+			String sql = "select userpw from USERINFO where userid = ?";
 			// SQLインジェクションを防ぐ
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 			// ここで？に差し込む
-			pStmt.setString(1, idpw.getUserid());
-			pStmt.setString(2,idpw.getUserpw());
+			pStmt.setString(1,id);
+			//pStmt.setString(2,pw);
 
 			// SELECT文を実行し、結果表を取得する
 			ResultSet rs = pStmt.executeQuery();
 
 			// ユーザーIDとパスワードが一致するユーザーがいたかどうかをチェックする
 			rs.next();
-			if (rs.getInt("count(*)") == 1) {
-				loginResult = true;
+			//if (rs.getInt("count(*)") == 1) {
+			//	loginResult = true;
+			//}
+			String data = rs.getString("userpw");
+			//System.out.println("pw-1:" + pw + "pw-2:" + data);
+
+			if( rs.getString("userpw") != null ) {
+				if ( pw.equals(rs.getString("userpw")) ) {
+					loginResult = true;
+				}
 			}
+
 		}
 		catch (SQLException e) {
 			e.printStackTrace();

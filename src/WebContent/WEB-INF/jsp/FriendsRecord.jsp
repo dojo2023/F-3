@@ -99,6 +99,7 @@
             <a href="/nomikai/EditServlet" class="menuText">&#9881;&#65039;設定</a>
         </li>
     </ul>
+ </div>
 </footer>
  </body>
 </html>

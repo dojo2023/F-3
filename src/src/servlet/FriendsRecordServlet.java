@@ -21,6 +21,7 @@ public class FriendsRecordServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+;
 	int start=0;
 	int flag=0;
 	String start_ex=null;
@@ -37,6 +38,7 @@ public class FriendsRecordServlet extends HttpServlet {
 		if(flag == 0) start = 1;
 		if(flag == 1) start = Integer.parseInt(start_ex);
 	}
+
 	FriendsDAO frienddata = new FriendsDAO();
 	List<Friends> cardList = frienddata.select(start,10);
 	request.setAttribute("cardList", cardList);

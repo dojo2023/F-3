@@ -22,7 +22,8 @@
 
         <div class="a">
           <h1 style="line-height: 60px;">いらっしゃいませ<br>お名前をお伺いいたします。</h1>
-          
+          <form method="post" action="/nomikai/LoginServlet">
+
           <input type="text" name="id" placeholder="IDを入力してください" size="50" class="id" ><br>
           <h1>合言葉はお持ちですか？</h1>
           <input type="password" name="pw" placeholder="パスワードを入力してください" size="50" class="pw">
@@ -31,7 +32,7 @@
           <br>
           <br>
           <br>
-          <button onclick="location.href='./signUp.jsp'">新規登録はこちら</button>
+          <button onclick="location.href='/nomikai/SignUpSevlet'">新規登録はこちら</button>
         </div>
 
         <div class="b">
@@ -46,8 +47,10 @@
           <br>
           <br>
           <br>
-          <a href="./menu.jsp" class="btn" style="margin-right: 20px;">入店する</a>
-          <a href="./payment.jsp" class="btn">お会計</a>
+      <!--   <a href="#" class="btn" style="margin-right: 20px;">入店する</a> -->
+      <button class="btn" style="margin-right: 20px; border: none;">入店する</button>
+          </form>
+          <a href="/nomikai/PaymentServlet" class="btn">お会計</a>
         </div>
       </div>
 
@@ -64,21 +67,27 @@
     <div class="for-sp">
       <div class="img2">
 
-        <form style="margin-left: 50px;">
+        <div style="margin-left: 50px;">
           <div class="text">いらっしゃいませ<br>お名前をお伺いいたします。</div>
-          <input type="text" name="DI" placeholder="IDを入力してください" size="30" class="id2"><br><br>
+          <form method="post" action="/nomikai/LoginServlet">
+          <input type="text" name="id" placeholder="IDを入力してください" size="30" class="id2"><br><br>
           <div class="text">合言葉はお持ちですか</div>
-          <input type="password" name="WP" placeholder="パスワードを入力してください" size="30" class="pw2">
+          <input type="password" name="pw" placeholder="パスワードを入力してください" size="30" class="pw2">
           <br>
           <br>
           <br>
-          <a  class="btn2">入店する</a>
-          <a href="./payment.jsp" class="btn2">お会計</a>
+          <div>
+          <button class="btn2" style=" border: none;">入店する</button>
+          </div>
+          </form>
+          <div class="okaikei">
+          <a href="/nomikai/PaymentServlet" class="btn2" class="v">お会計</a>
+          </div>
           <br>
           <br>
           <br>
-          <button onclick="location.href='./signUp.jsp'">新規登録はこちら</button>
-        </form>
+          <button onclick="location.href='/nomikai/SignUpServlet'">新規登録はこちら</button>
+        </div>
     </div>
     </div>
 
