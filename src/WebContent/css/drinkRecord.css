@@ -351,8 +351,8 @@ body {
     top: 0
 }
 
-.container
- {
+.container,
+a {
     display: flex
 }
 
@@ -366,7 +366,7 @@ body {
 }
 
 body {
-    background-image: url("/nomikai/img/backImage/drinkRecodeBG.jpg");
+    background-image: url("../img/drinkRecodeBG.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin: 0
@@ -543,7 +543,7 @@ h1 {
     left: 0;
     height: 100vh;
     width: 100vw;
-    background-image: url('/nomikai/img/backImage/totalRecodeBG.jpg');
+    background-image: url('../img/totalRecodeBG.jpg');
     transition: top .5s ease-in-out;
     z-index: 2;
     overflow-y: scroll;
@@ -658,3 +658,4 @@ h3 {
     overflow-y: scroll;
     overflow-x: hidden
 }
+

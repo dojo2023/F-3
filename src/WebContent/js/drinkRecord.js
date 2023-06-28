@@ -40,91 +40,75 @@ function enableInputs() {
     });
 }
 
-const data = [
-    { No: "1", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
-    { No: "2", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
-    { No: "3", 食べた量: "5杯", 飲んだ量: "5杯", 料金: "5000円" },
-    // 他のデータ行
-];
 
-// 合計値を格納する変数
-let totalDrink = 0;
-let totalFood = 0;
-let totalPrice = 0;
+let data;
 
-// データのループ処理
-for (let i = 0; i < data.length; i++) {
-    const record = data[i];
-    const drink = parseInt(record.飲んだ量);
-    const food = parseInt(record.食べた量);
-    const price = parseInt(record.料金);
+const getData = () => {
+  let request = new XMLHttpRequest();
 
-    // 合計値の計算
-    totalDrink += drink;
-    totalFood += food;
-    totalPrice += price;
-}
-
-// 合計値の表示
-document.getElementById("totalDrink").textContent = totalDrink;
-document.getElementById("totalFood").textContent = totalFood;
-document.getElementById("totalPrice").textContent = totalPrice;
-
-// アイコンの表示
-const maxIcons = 5; // 表示する最大のアイコン数
-
-const iconContainer = document.getElementById("BeerIcon-container");
-iconContainer.innerHTML = ""; // アイコンコンテナをクリア
-
-for (let i = 0; i < totalDrink; i++) {
-    if (i < maxIcons) {
-        const iconElement = document.createElement("img");
-        iconElement.src = "beer.png";
-        iconElement.alt = "icon";
-        iconElement.classList.add("icon");
-        iconContainer.appendChild(iconElement);
-    } else {
-        const plusElement = document.getElementById("plus");
-        if (!plusElement) {
-            const plusElement = document.createElement("h3");
-            plusElement.id = "plus";
-            plusElement.classList.add("span");
-            plusElement.textContent = "+" + (totalDrink - maxIcons);
-            iconContainer.appendChild(plusElement);
-        } else {
-            plusElement.textContent = "+" + (totalDrink - maxIcons);
-        }
-        break;
+  request.onreadystatechange = function() {
+    if (request.readyState === XMLHttpRequest.DONE) {
+      if (request.status === 200) {
+        data = JSON.parse(request.responseText); // 取得したデータをdataに格納
+        processData(data);
+        checkData(); // データの確認
+        displayData(data); // データを表示
+      } else {
+        console.error('Request failed. Status:', request.status);
+      }
     }
-}
+  };
 
-const iconContainer2 = document.getElementById("YakitoriIcon-container");
-iconContainer2.innerHTML = ""; // アイコンコンテナをクリア
+  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?jsonget=dsfhjv4we8r321Hgscv', true);
+  request.send();
+};
+/*
+const sendData = () => {
+  let request = new XMLHttpRequest();
 
-for (let i = 0; i < totalFood; i++) {
-    if (i < maxIcons) {
-        const iconElement = document.createElement("img");
-        iconElement.src = "yakitori.png";
-        iconElement.alt = "icon";
-        iconElement.classList.add("icon");
-        iconContainer2.appendChild(iconElement);
-    } else {
-        const plusYElement = document.getElementById("plusY");
-        if (!plusYElement) {
-            const plusYElement = document.createElement("h3");
-            plusYElement.id = "plusY";
-            plusYElement.classList.add("plusY");
-            plusYElement.textContent = "+" + (totalFood - maxIcons);
-            iconContainer2.appendChild(plusYElement);
-        } else {
-            plusYElement.textContent = "+" + (totalFood - maxIcons);
-        }
-        break;
+  request.onreadystatechange = function() {
+    if (request.readyState === XMLHttpRequest.DONE) {
+      if (request.status === 200) {
+        //data = JSON.parse(request.responseText); // 取得したデータをdataに格納
+        //processData(data);
+        //checkData(); // データの確認
+        //displayData(data); // データを表示
+      } else {
+        console.error('Request failed. Status:', request.status);
+      }
     }
-}
+  };
+
+  let num_value=1;
+  let eat_value=3;
+  let drink_value=3;
+  let account_value=1000;
+  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&eat=' + eat_value + '&drink=' + drink_value + '&account=' + account_value, true);
+//  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&del=true',true);//削除
+};
+*/
+
+
+const processData = (data) => {
+  console.log('Data:', data);
+  // ここでデータの処理や表示を行う
+};
+
+const checkData = () => {
+  console.log('Data:', data);
+  // dataの内容を確認する
+};
+
+window.addEventListener('load', () => {
+  console.log('Window loaded');
+  getData();
+
+});
+
 
 // データを表示する関数
 function displayData() {
+	console.log('displayDataメソッドが実行されました');
     const list = document.querySelector(".splide__list");
 
     // 既存のデータ行を削除
@@ -169,46 +153,145 @@ function displayData() {
             form.appendChild(dataGroup);
         }
 
-        const buttonGroup = document.createElement("div");
-        buttonGroup.classList.add("buttonA");
+  const buttonGroup = document.createElement("div");
+  buttonGroup.classList.add("buttonA");
 
-        const editButton = document.createElement("button");
-        editButton.type = "button";
-        editButton.classList.add("buttonB");
-        editButton.textContent = "編集";
-        editButton.addEventListener("click", enableInputs);
+  const editButton = document.createElement("button");
+  editButton.type = "submit"; // ボタンのタイプをsubmitに変更
+  editButton.classList.add("buttonB");
+  editButton.textContent = "編集";
+  editButton.addEventListener("click", enableInputsAndUpdateButton); // 編集ボタンのクリックイベントにenableInputsAndUpdateButton関数を追加
 
-        const deleteButton = document.createElement("button");
-        deleteButton.type = "button";
-        deleteButton.classList.add("buttonB");
-        deleteButton.textContent = "削除";
+  const deleteButton = document.createElement("button");
+  deleteButton.type = "button";
+  deleteButton.classList.add("buttonB");
+  deleteButton.textContent = "削除";
 
-        buttonGroup.appendChild(editButton);
-        buttonGroup.appendChild(deleteButton);
+  buttonGroup.appendChild(editButton);
+  buttonGroup.appendChild(deleteButton);
 
-        form.appendChild(buttonGroup);
-        invoiceDiv.appendChild(form);
-        listItem.appendChild(invoiceDiv);
-        list.appendChild(listItem);
-    });
+  form.appendChild(buttonGroup);
+  invoiceDiv.appendChild(form);
+  listItem.appendChild(invoiceDiv);
+  list.appendChild(listItem);
+});
 
-    function enableInputs() {
-        const form = this.closest("form");
-        const inputs = form.querySelectorAll("input");
+function enableInputsAndUpdateButton(event) {
+  const form = this.closest("form");
+  const inputs = form.querySelectorAll("input");
 
-        inputs.forEach((input) => {
-            input.disabled = false;
-        });
+  inputs.forEach((input) => {
+    input.disabled = false;
+  });
+
+  this.textContent = "更新"; // ボタンのテキストを「編集」から「更新」に変更
+  this.removeEventListener("click", enableInputsAndUpdateButton); // クリックイベントのリスナーを削除
+  form.addEventListener("submit", disableInputsAndRestoreButton); // submitイベントのリスナーを追加
+  event.preventDefault(); // ボタンのデフォルトのsubmit動作をキャンセル
+}
+
+function disableInputsAndRestoreButton(event) {
+  const form = event.target;
+  const inputs = form.querySelectorAll("input");
+
+  inputs.forEach((input) => {
+    input.disabled = true;
+  });
+
+  const editButton = form.querySelector("button[type='submit']");
+  editButton.textContent = "編集"; // ボタンのテキストを「更新」から「編集」に変更
+  form.removeEventListener("submit", disableInputsAndRestoreButton); // submitイベントのリスナーを削除
+
+  const formData = new FormData(form);
+  const formValues = Object.fromEntries(formData.entries());
+  console.log("フォームの送信データ:", formValues);
+}
+
+// 合計値を格納する変数
+let totalDrink = 0;
+let totalFood = 0;
+let totalPrice = 0;
+
+// データのループ処理
+for (let i = 0; i < data.length; i++) {
+    const record = data[i];
+    const drink = parseInt(record.eat);
+    const food = parseInt(record.drink);
+    const price = parseInt(record.account);
+
+    // 合計値の計算
+    totalDrink += drink;
+    totalFood += food;
+    totalPrice += price;
+}
+
+// 合計値の表示
+document.getElementById("totalDrink").textContent = totalDrink;
+document.getElementById("totalFood").textContent = totalFood;
+document.getElementById("totalPrice").textContent = totalPrice;
+
+// アイコンの表示
+const maxIcons = 5; // 表示する最大のアイコン数
+
+const iconContainer = document.getElementById("BeerIcon-container");
+iconContainer.innerHTML = ""; // アイコンコンテナをクリア
+
+for (let i = 0; i < totalDrink; i++) {
+    if (i < maxIcons) {
+        const iconElement = document.createElement("img");
+        iconElement.src = "img/object/beer3.png";
+        iconElement.alt = "icon";
+        iconElement.classList.add("icon");
+        iconContainer.appendChild(iconElement);
+    } else {
+        const plusElement = document.getElementById("plus");
+        if (!plusElement) {
+            const plusElement = document.createElement("h3");
+            plusElement.id = "plus";
+            plusElement.classList.add("span");
+            plusElement.textContent = "+" + (totalDrink - maxIcons);
+            iconContainer.appendChild(plusElement);
+        } else {
+            plusElement.textContent = "+" + (totalDrink - maxIcons);
+        }
+        break;
     }
+}
 
-    // Splide スライダーの初期化
-    new Splide('.splide', {
-        perPage: 1,
-        gap: 10,
-        type: 'loop',
-        pagination: true,
-        keyboard: true,
-    }).mount();
+const iconContainer2 = document.getElementById("YakitoriIcon-container");
+iconContainer2.innerHTML = ""; // アイコンコンテナをクリア
+
+for (let i = 0; i < totalFood; i++) {
+    if (i < maxIcons) {
+        const iconElement = document.createElement("img");
+        iconElement.src = "img/object/yakitori.png";
+        iconElement.alt = "icon";
+        iconElement.classList.add("icon");
+        iconContainer2.appendChild(iconElement);
+    } else {
+        const plusYElement = document.getElementById("plusY");
+        if (!plusYElement) {
+            const plusYElement = document.createElement("h3");
+            plusYElement.id = "plusY";
+            plusYElement.classList.add("plusY");
+            plusYElement.textContent = "+" + (totalFood - maxIcons);
+            iconContainer2.appendChild(plusYElement);
+        } else {
+            plusYElement.textContent = "+" + (totalFood - maxIcons);
+        }
+        break;
+    }
+}
+
+// Splide スライダーの初期化
+new Splide('.splide', {
+	perPage: 1,
+	gap: 10,
+	type: 'loop',
+	pagination: true,
+	keyboard: true,
+}).mount();
+
 }
 
 // ページ読み込み時にデータを表示
