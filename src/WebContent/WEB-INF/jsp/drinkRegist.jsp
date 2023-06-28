@@ -425,14 +425,15 @@ if ((drink != "") && (eat != "") && (money != "")) {
 	console.log('userID : ' + userID);
 	console.log('drink:' + drink +", eat:"  + eat + ", money:" + money + "");
 	// 友達チェックボックスの取得
+	/*
 	let checkData = document.querySelectorAll("input[name=checks_data]:checked");
 	let array = new Array;
 	for (let i=0; i<checkData.length; i++){
 		array[i] = checkData[i].value;
 		console.log('array['+ i + ']' + array[i]);
 	}
-
-    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"&"+"checkData="+array+"", true);
+*/
+    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"", true);
 }
 
 // 通常のデータ表示
