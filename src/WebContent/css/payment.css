@@ -279,26 +279,32 @@ background: rgba(20, 20, 20, 0.75);
 
 /*メディアクエリ*/
 
-/*
-        @media (max-width: 400px) {
-            .img-small {
-                height: 100vh;
-                width: 120vw;
-                position: relative;
-                z-index: -1;
-            }
-            .img-min,
-            .img-wide {
-                display: none;
-            }
+@media (max-width: 390px) {
+body {
+		background-image: url(/nomikai/img/backImage/paymentSp.jpg);
+		background-repeat: no-repeat;
+		position: relative;
+	}
 
-            .char-style {
-                writing-mode: vertical-rl;
-                font-size: 45px;
-                margin: 5% 10%;
-                margin-top: 45%;
-                background-color: transparent;
-                border: none;
-            }
-        }
-*/
+.bigForm {
+	background: rgba(20, 20, 20, 0.7);
+}
+
+.payment-box {
+	 height: 500px;
+	width: 500px;
+	 margin: auto;
+	 text-align: center;
+	position: absolute;
+	top: -20px;
+	left: -15%;
+	 }
+	 .char-style {
+	writing-mode: vertical-rl;
+	font-size: 45px;
+	margin: 5% 10%;
+	margin-top: 45%;
+	background-color: transparent;
+	border: none;
+	}
+}

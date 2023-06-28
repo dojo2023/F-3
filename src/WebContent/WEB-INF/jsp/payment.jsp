@@ -9,12 +9,6 @@
 
 <body>
 
-<!--
-    <img class="img-wide" src="/nomikai/img/backImage/payment.jpg">
-    <img class="img-min" src="/nomikai/img/object/paymentResp.png">
-    <img class="img-small" src="/nomikai/img/object/paymentResp.png">
- -->
-
     <form class="bigForm">
         <div class="payment-box">
             <button type="button" id="warikan" class="paySelect" onClick="divide()">・割り勘</button>
