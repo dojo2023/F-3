@@ -424,17 +424,17 @@ if ((drink != "") && (eat != "") && (money != "")) {
 	console.log('call : nomikaiHidoukiURL');
 	console.log('userID : ' + userID);
 	console.log('drink:' + drink +", eat:"  + eat + ", money:" + money + "");
-    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"", true);
+    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"", true);
 }
 
 // 通常のデータ表示
 else if ((registName === "") && (imgNumber === "")) {
-	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv', true);
+	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv', true);
 }
 // 友達登録
 else {
 	console.log('insert into friends values(' + registName + " 1, /nomikai/img/icon/icon" + imgNumber + ")");
-	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv&name='+registName+"&"+"img="+"/nomikai/img/icon/icon"+imgNumber+".png", true);
+	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&name='+registName+"&"+"img="+"/nomikai/img/icon/icon"+imgNumber+".png", true);
 }
 request.send();
 }

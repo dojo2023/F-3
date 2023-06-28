@@ -17,9 +17,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.json.JSONObject;
 
-import dao.DrinkDAO;
-import model.Drink;
-
 /**
  * Servlet implementation class drinkRegistServlet
  */
@@ -157,24 +154,6 @@ public class DrinkRegistServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// リクエストパラメータの受け取り
-		request.setCharacterEncoding("UTF-8");
-		// 飲み会データ
-		Integer drink = Integer.parseInt(request.getParameter("DRINK"));
-		Integer eat = Integer.parseInt(request.getParameter("EAT"));
-		Integer money = Integer.parseInt(request.getParameter("MONEY"));
-
-		// 検索処理を行う
-		DrinkDAO dDao = new DrinkDAO();
-		// データが挿入できたかどうか
-		boolean insertDataCheck = dDao.insert(new Drink(drink, eat, money));
-
-		// 検索結果をリクエストスコープに格納する
-		request.setAttribute("insertDataCheck", insertDataCheck);
-
-		// 結果ページにフォワードする
-		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRegist.jsp");
-		dispatcher.forward(request, response);
 
 	}
 
