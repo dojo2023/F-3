@@ -1,4 +1,10 @@
 @charset "UTF-8";
+body {
+	background-image: url(/nomikai/img/backImage/payment.jpg);
+	background-repeat: no-repeat;
+	position: relative;
+}
+
  .fonts {
             font-family: "HGP行書体";
         }
@@ -24,26 +30,18 @@
 				color: white;
 				background: black;
 				border: 3px solid white;
-				font-size: 35px;
+				font-size: 60px;
 				text-decoration: none;
 				position: absolute;
 				padding: 0 10px 0 10px;
-				right: 30%;
-				bottom: -15%;
+				right: 15%;
+				bottom: -10%;
 				}
 
-				#ikenie {
-				color: white;
-				background: black;
-				border: 3px solid white;
-				font-size: 35px;
-				text-decoration: none;
-				position: absolute;
-				padding: 0 10px 0 10px;
-				right: 28%;
+				#hcSelect option:nth-child(2n+1){
+				background:lightgray;
 				}
 
-        @media (min-width: 626px) {
             .img-wide {
                 height: 100vh;
                 width: 100vw;
@@ -66,66 +64,15 @@
             .img-small {
                 display: none;
             }
-
-        }
-
-        @media ((max-width: 625px) and (min-width: 400px)) {
-            .img-min {
-                height: 100vh;
-                width: 100vw;
-                position: relative;
-                top: -3vh;
-                z-index: -1;
-            }
-
-            .char-style {
-                writing-mode: vertical-rl;
-                font-size: 45px;
-                margin: 5% 10%;
-                margin-top: 32%;
-                margin-bottom: 0;
-                background-color: transparent;
-                border: none;
-            }
-
-            .img-wide,
-            .img-small {
-                display: none;
-            }
-        }
-
-        @media (max-width: 400px) {
-            .img-small {
-                height: 100vh;
-                width: 120vw;
-                position: relative;
-                z-index: -1;
-                /* bottom: 0; */
-            }
-
-            .img-min,
-            .img-wide {
-                display: none;
-            }
-
-            .char-style {
-                writing-mode: vertical-rl;
-                font-size: 45px;
-                margin: 5% 10%;
-                margin-top: 45%;
-                background-color: transparent;
-                border: none;
-            }
-        }
 
         .payment-box {
             height: 500px;
             width: 500px;
             margin: auto;
             text-align: center;
-            position: relative;
-            top: -100vh;
-            /* display: inline-block; */
+            position: absolute;
+            top: 8%;
+            left: 26%;
         }
 
         .payment-box span {
@@ -153,12 +100,36 @@
         }
 
 
-        .btnStyle {
+        .btnStyle1 {
             height: 40px;
             width: 150px;
-            margin: auto;
+            margin-left: 15% ;
             margin-top: 10px;
             display: block;
+            background: red;
+            border: 2px solid black;
+            font-size: 14px;
+            color: white;
+        }
+
+        .btnStyle1:hover {
+			background: orange;
+        }
+
+        .btnStyle2 {
+            height: 40px;
+            width: 150px;
+            margin-left: 15% ;
+            margin-top: 10px;
+            display: block;
+            background: white;
+            border: 2px solid black;
+            font-size: 20px;
+            color: black;
+        }
+
+        .btnStyle2:hover {
+			background: gainsboro;
         }
 
         /* 扇形 */
@@ -195,12 +166,71 @@
             margin: auto;
         }
 
+	.nameTable {
+		position: absolute;
+		bottom: 2%;
+		left: 75%;
+		width: 20%;
+	}
+
+	.nameForm {
+	width: 100%;
+
+	}
+	.nameText {
+		color: white;
+	}
+
+	#color1 {
+		background: red;
+		font-size: 120%;
+	}
+
+	#color2 {
+		background: blue;
+		font-size: 120%;
+	}
+
+	#color3 {
+		background: green;
+		font-size: 120%;
+	}
+
+	#color4 {
+		color: black;
+		background: yellow;
+		font-size: 120%;
+	}
+
+	#color5 {
+		color: black;
+		background: pink;
+		font-size: 120%;
+	}
+
+	#color6 {
+		color: black;
+		background: greenyellow;
+		font-size: 120%;
+	}
+
+	#color7 {
+		background: magenta;
+		font-size: 120%;
+	}
+
+	#color8 {
+		background: orange;
+		font-size: 120%;
+	}
+
+
 /*下からフェードイン*/
  .rouletteWrapper {
-margin-top: -97%;
-margin-left: 15%;
-margin-right: 15%;
-padding: 15px 100px 15px 100px;
+position: absolute;
+top: 5%;
+left: 15%;
+padding: 15px 200px 15px 200px;
 background: rgba(20, 20, 20, 0.75);
    animation-name: fadein-bottom;
    animation-duration: 0.5s;
@@ -219,6 +249,56 @@ background: rgba(20, 20, 20, 0.75);
    }
 }
 
-.rouletteNon {
-	display: none;
-}
+	.rouletteNon {
+		display: none;
+	}
+
+	#backButton {
+		font-family: HGS行書体;
+		font-size: 50px;
+		padding: 10px 20px 10px 20px;
+		border: 3px solid black;
+		background: white;
+		color: black;
+		position: absolute;
+		right: 50px;
+		bottom: 50px;
+	}
+
+	#backButton:link {
+	color: black;
+	text-decoration: none;
+	}
+
+	#backButton:hover {
+	color: white;
+	background: black;
+	text-decoration: none;
+	border: 3px solid white;
+	}
+
+/*メディアクエリ*/
+
+/*
+        @media (max-width: 400px) {
+            .img-small {
+                height: 100vh;
+                width: 120vw;
+                position: relative;
+                z-index: -1;
+            }
+            .img-min,
+            .img-wide {
+                display: none;
+            }
+
+            .char-style {
+                writing-mode: vertical-rl;
+                font-size: 45px;
+                margin: 5% 10%;
+                margin-top: 45%;
+                background-color: transparent;
+                border: none;
+            }
+        }
+*/
