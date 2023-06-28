@@ -123,7 +123,7 @@ public class UserDAO {
 
 
 
-	public boolean insertEdit(User userinfo) {
+	public boolean updateEdit(User userinfo) {
 		Connection conn = null;
 		boolean result = false;
 
