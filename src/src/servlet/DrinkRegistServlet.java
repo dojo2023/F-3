@@ -40,6 +40,14 @@ public class DrinkRegistServlet extends HttpServlet {
 			String money = request.getParameter("money");
 			String userID = request.getParameter("userID");
 
+			/*
+			String checkData[] = request.getParameterValues("checkData");
+			if (checkData.length > 0) {
+				for (int i = 0; i < checkData.length; i++) {
+					System.out.print(checkData[i]);
+				}
+			}*/
+
 			String secret_code = "dsfhjv4we8r321Hgscv";
 			System.out.println("data1:" + json_enable);
 			System.out.println("data2:" + secret_code);
