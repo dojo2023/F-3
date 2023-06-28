@@ -23,7 +23,7 @@ import model.Drink;
 /**
  * Servlet implementation class drinkRegistServlet
  */
-@WebServlet("/DrinkRegistServlet_hidouki")
+@WebServlet("/DrinkRegistServlet")
 public class DrinkRegistServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
