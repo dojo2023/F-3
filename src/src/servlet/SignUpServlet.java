@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import dao.UserDAO;
+import model.User;
+
 /**
  * Servlet implementation class SignUpServlet
  */
@@ -20,7 +23,8 @@ public class SignUpServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// ログインページにフォワードする
+		// 新規登録ページにフォワードする
+		System.out.println("doGet");
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/signUp.jsp");
 		dispatcher.forward(request, response);
 	}
@@ -28,14 +32,24 @@ public class SignUpServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("unused")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
 		String newid = request.getParameter("newID");
 		String newpw = request.getParameter("newPW");
-		String newmax = request.getParameter("newMax");
-		String newage = request.getParameter("newAge");
+		int newmax = Integer.parseInt(request.getParameter("newMax"));
+		int newage = Integer.parseInt(request.getParameter("newAge")) ;
 		String gender = request.getParameter("gender");
+
+
+        // データベースに登録する
+        UserDAO dao = new UserDAO();
+        boolean result = dao.insertSinki(new User(newid, newpw, newmax, newage, gender));
+
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
+		dispatcher.forward(request, response);
+
 	}
 
 }

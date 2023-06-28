@@ -79,11 +79,11 @@ table {
 .img_style1 {
     position: absolute;
     top: 500px;
-    left: 665px;
+    left: 655px;
 }
 
 .img_style1-1 {
-    width: 140px;
+    width: 150px;
 }
 
 .img_style2 {
@@ -100,17 +100,19 @@ table {
 
 .p_style1{
     position: absolute;
-    top: 550px;
-    left: 700px;
-    font-size: 40px;
+    top: 540px;
+    left: 685px;
+    font-size: 50px;
+    color: #333300;
     font-family: HGP行書体;
 }
 
 .p_style2{
     position: absolute;
-    top: 550px;
-    left: 940px;
-    font-size: 40px;
+    top: 590px;
+    left: 917px;
+    font-size: 50px;
+    color: #333300;
     font-family: HGP行書体;
 }
 

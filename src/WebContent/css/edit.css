@@ -20,6 +20,7 @@
     position: relative;
     top: -20px;
     left: 0px;
+    font-family: HGP行書体;
 }
 .input-style2 {
     position: absolute;
@@ -32,6 +33,7 @@
     position: relative;
     top: -20px;
     left: 0px;
+    font-family: HGP行書体;
 }
 .input-style3 {
     position: absolute;
@@ -44,6 +46,7 @@
     position: relative;
     top: -20px;
     left: -5px;
+    font-family: HGP行書体;
 }
 .input-style4 {
     position: absolute;
@@ -56,6 +59,7 @@
     position: relative;
     top: -15px;
     left: -20px;
+    font-family: HGP行書体;
 }
 /* --pc-img-------------------------------------------- */
 .img-style1 {
@@ -236,8 +240,8 @@ height: 150px;
     color: #FF0000;
     font-size: 23px;
     position: absolute;
-    top: 540px;
-    left: 237px;
+    top: 563px;
+    left: 232px;
 }
 /* --pc-radio-------------------------------------------- */
 .radio-style {
@@ -253,7 +257,7 @@ input[type=radio]+label:before {
     /* border: 6px solid white; */
     box-sizing: border-box;
 }
-input[type=radio][value="男性"]+label:before{
+/*input[type=radio][value="男性"]+label:before{
 background-image: url(male1.png);
 }
 input[type=radio][value="male2.png"]+label:before {
@@ -261,7 +265,7 @@ input[type=radio][value="male2.png"]+label:before {
 }
 input[type=radio][value="female1.png"]+label:before {
     background-image: url(female1.png);
-}
+}*/
 input[type=radio]:checked+label::before {
     /* border: 6px solid white; */
     background-image: url(/nomikai/img/object/circle.png);
@@ -270,6 +274,53 @@ input[type=radio]:checked+label::before {
 }
 input[type=radio] {
     display: none;
+}
+
+/* --pc-footer-------------------------------------------- */
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-left: 295px;
+    top: 490px;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menuBar {
+        background: rgba(139, 0, 0, 0.8);
+        list-style-type: none;
+        text-align: justify;
+}
+
+.menuText {
+
+        font-family: メイリオ;
+        font-weight: normal;
+        font-size: 22px;
+        padding: 0 15px 0 15px;
+}
+
+.menuText:link {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:visited {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:active {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:hover {
+        text-decoration: none;
+        color: gold;
 }
 /* @@sp-body@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
 @media screen and (max-width: 450px){
@@ -524,5 +575,51 @@ input[type=radio]:checked+label::before {
 }
 input[type=radio] {
     display: none;
+}
+
+/* --sp-footer-------------------------------------------- */
+
+footer {
+	position: absolute;
+    bottom: 0;
+    margin-left: 15px;
+}
+
+.menu {
+    padding: 0;
+}
+
+.menuBar {
+        background: rgba(139, 0, 0, 0.8);
+        list-style-type: none;
+        text-align: justify;
+}
+
+.menuText {
+
+        font-family: メイリオ;
+        font-weight: normal;
+        font-size: 22px;
+        padding: 0 15px 0 15px;
+}
+
+.menuText:link {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:visited {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:active {
+        text-decoration: none;
+        color: white;
+}
+
+.menuText:hover {
+        text-decoration: none;
+        color: gold;
 }
 }
