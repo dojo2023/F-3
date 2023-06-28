@@ -144,7 +144,7 @@ public class DrinkRegistServlet extends HttpServlet {
 				// TODO: handle exception
 			}
 		} catch (NullPointerException e) {
-			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRegist_hidouki.jsp");
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRegist.jsp");
 			dispatcher.forward(request, response);
 		} catch (Throwable t) {
 			t.printStackTrace();
