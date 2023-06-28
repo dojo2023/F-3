@@ -404,7 +404,7 @@
      for(let i=0; i < len; i++){
      	//今回jsonObjectは二次元配列で格納されているため１レコード毎に連結
      	//もしデータにHTMLの装飾が必要ならここでタグを追加する
-     	view_data += "<input type=\"checkbox\">" +
+     	view_data += "<input type=\"checkbox\" name=\"checks_data\" value=\""+ i + "\">" +
      				 jsonObject[i].name +
      				 "<br>";
      }
@@ -424,7 +424,15 @@ if ((drink != "") && (eat != "") && (money != "")) {
 	console.log('call : nomikaiHidoukiURL');
 	console.log('userID : ' + userID);
 	console.log('drink:' + drink +", eat:"  + eat + ", money:" + money + "");
-    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"", true);
+	// 友達チェックボックスの取得
+	let checkData = document.querySelectorAll("input[name=checks_data]:checked");
+	let array = new Array;
+	for (let i=0; i<checkData.length; i++){
+		array[i] = checkData[i].value;
+		console.log('array['+ i + ']' + array[i]);
+	}
+
+    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"&"+"checkData="+array+"", true);
 }
 
 // 通常のデータ表示
@@ -438,6 +446,7 @@ else {
 }
 request.send();
 }
+
  window.addEventListener('load', (event) => {
 	 console.log("window load event pass");
 	  getData();
@@ -464,7 +473,7 @@ request.send();
 	  money = document.getElementById('moneyInput').value;
 	  console.log(drink +", "  + eat + ", " + money + "");
 	  getData();
-	  // window.location.reload();
+	  window.location.reload();
   });
  </script>
 </body>
