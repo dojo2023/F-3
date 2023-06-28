@@ -2,8 +2,7 @@
  *
  */
 
-let drink = 0;
-let eat = 0;
+
 let drinkMob = 0;
 let eatMob = 0;
 
@@ -12,14 +11,10 @@ function btnCount(i) {
             console.log('abcde');
 
             if (i === 1) {
-                drink = cntUp(drink);
-                document.getElementById('drink').value = drink;
                 drinkMob = cntUp(drinkMob);
                 document.getElementById('drinkMobile').value = drinkMob;
             }
             else {
-                eat = cntUp(eat);
-                document.getElementById('eat').value = eat;
                 eatMob = cntUp(eatMob);
                 document.getElementById('eatMobile').value = eatMob;
             }
@@ -35,19 +30,14 @@ function btnCount(i) {
          // リセットボタンのメソッド
         function resetBtn(i) {
             if (i === 1) {
-                document.getElementById('drink').value = `0`;
-                drink = 0;
                 document.getElementById('drinkMobile').value = `0`;
                 drinkMob = 0;
             }
             else if (i === 2) {
-                document.getElementById('eat').value = `0`;
-                eat = 0;
                 document.getElementById('eatMobile').value = `0`;
                 eatMob = 0;
             }
             else {
-                document.getElementById('money').value = `0`;
                 document.getElementById('moneyInput').value = `0`;
             }
         }
@@ -150,6 +140,8 @@ function btnCount(i) {
         });
 
 
+
+
        let friendList = document.getElementById('friendListBtnMobile');
         friendList.addEventListener('click', function () {
             let list = document.querySelector('.box-style-mobile');
@@ -169,7 +161,4 @@ function btnCount(i) {
            document.getElementById('moneyInput').value = ``;
         });
 
-        Input.addEventListener(`blur`, function() {
-           console.log('aaaaa');
-           document.getElementById('moneyInput').value = `0`;
-        });
+

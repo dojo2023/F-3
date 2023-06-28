@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<% String id = (String)application.getAttribute("id"); %>
 <html lang="ja">
 
 <head>
@@ -14,15 +13,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css">
     <link rel="stylesheet" href="/nomikai/css/drinkRegist.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
-
-    <style>
-    .slide-style  {
-        width: 100px;
-        height: 120px;
-        background-color: inherit;
-        border: none;"
-      }
-    </style>
 </head>
 
 <body>
@@ -288,7 +278,13 @@
                         <!-- スライドを囲む要素（必須） -->
                         <div class="swiper-wrapper">
                             <!-- スライド要素（必須） -->
-                            <div id="iconImgSlider"></div>
+                            <c:forEach var="e" items="${cardList}">
+                            <div class="swiper-slide" style="width: 100px; background-color: inherit; border: none;">
+                                <img src="${e.avator}" alt="">
+                                <p>${e.name}</p>
+                            </div>
+                            </c:forEach>
+
                         </div>
                         <!-- ナビゲーションボタン要素（省略可能） -->
                         <div class="swiper-button-prev"></div>
@@ -299,11 +295,10 @@
                 <td style="padding: 0 20px;"></td>
             </tr>
         </table>
-        <button id="registBtn" type="button" class="fonts label-style"
+        <button type="submit" class="fonts label-style"
             style="margin: auto; display: block; height: 40px; width: 100px;">登録</button>
     </form>
 
-    <input id="userID" type="hidden" value=<%= id %>> <!-- ログインしているユーザのID取得 -->
 
     <!-- ------ 新規友達登録ウィンドウ ------ -->
     <form action="/nomikai/DrinkNewFriends" method="POST">
@@ -312,7 +307,7 @@
               <img src="/nomikai/img/object/x.svg" alt="">
             </button>
             <p>名前を入力してください</p>
-              <input id="registName" type="text" name="REGISTNAME" id=""><br>
+              <input type="text" name="REGISTNAME" id=""><br>
             <p>アイコンを選択してください</p>
             <!-- 選択した画像を識別する -->
             <input id="imgSelect" type="hidden" name="imgSelect" value="0">
@@ -359,7 +354,7 @@
             <button type="button" class="registBoxBtnStyle" onclick="btnCircleBorder(14)">
               <img id="img14" class="registBoxImg" src="/nomikai/img/icon/icon14.png" alt="">
             </button>
-            <button id="friendAddBtn" type="button" class="newFriendRegistBtn">登録する</button>
+            <button id="friendAddBtn" class="newFriendRegistBtn">登録する</button>
         </div>
     </form>
 
@@ -379,28 +374,24 @@
 
  <script src="/nomikai/js/drinkRegist.js"></script>
  <script>
-//非同期でデータを受け取り表示
-// 入力された名前と画像の番号取得
- var registName="";
- var imgNumber="";
- var drink="";
- var eat="";
- var money="";
-
+ // 非同期でデータを受け取り表示
  const getData = () =>{
-	 //console.log('call is getData');
+	 console.log('call is getData');
   let request = new XMLHttpRequest();
-  console.log(request.responseText);
   request.onreadystatechange = function(e){
    if (request.readyState == 4){
      if (request.status == 200){
- 	let jsonObject = JSON.parse(request.responseText)
-     //let node = document.getElementById("friendsListBox");
+ 	//jsonObject自体が配列JSONデータになっています。
+ 	//request.responseTextはjsonのテキストであるため、配列処理ができません。
+ 	//JSON.parseでjsonオブジェクトに変換することで変数として扱えます。
+ 	//今回はjsonが配列形式でレコードを形成しているため配列でデータが取り出せます。
+ 	let jsonObject = JSON.parse(request.responseText);
+
      let node = document.getElementById("friendNameList");
      let recv = request.responseText; // サーバから渡されたデータ
      let view_data = new Array(); // データを蓄積していく
      let len = Object.keys(jsonObject).length; // データ長を取得
-	console.log(node);
+
      for(let i=0; i < len; i++){
      	//今回jsonObjectは二次元配列で格納されているため１レコード毎に連結
      	//もしデータにHTMLの装飾が必要ならここでタグを追加する
@@ -408,64 +399,27 @@
      				 jsonObject[i].name +
      				 "<br>";
      }
+
      console.log('this page is drinkRegist.jsp');
+
 		//JSONから取り出したレコードをHTMLとして挿し込む
      node.innerHTML = view_data;
+
    }else{
      console.error(request.statusText);
    }
  }
 }
+
 request.type = "json";
-
-
-if ((drink != "") && (eat != "") && (money != "")) {
-	let userID = document.getElementById('userID').value;
-	console.log('call : nomikaiHidoukiURL');
-	console.log('userID : ' + userID);
-	console.log('drink:' + drink +", eat:"  + eat + ", money:" + money + "");
-    request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv&drink='+drink+"&"+"eat="+eat+"&"+"money="+money+"&"+"userID="+userID+"", true);
-}
-
-// 通常のデータ表示
-else if ((registName === "") && (imgNumber === "")) {
-	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv', true);
-}
-// 友達登録
-else {
-	console.log('insert into friends values(' + registName + " 1, /nomikai/img/icon/icon" + imgNumber + ")");
-	request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet_hidouki?jsonget=dsfhjv4we8r321Hgscv&name='+registName+"&"+"img="+"/nomikai/img/icon/icon"+imgNumber+".png", true);
-}
+request.open('GET', 'http://localhost:8080/nomikai/DrinkRegistServlet?jsonget="abcde"', true);
 request.send();
 }
+
  window.addEventListener('load', (event) => {
 	 console.log("window load event pass");
 	  getData();
- });
-
- // 友達新規登録
-  let friendAddBtn = document.getElementById('friendAddBtn');
-  friendAddBtn.addEventListener('click', () => {
-	console.log('call friendAddBtn event');
-	registName = document.getElementById('registName').value;
-	imgNumber = document.getElementById('imgSelect').value;
-	registBox.style.opacity = "0";
-    registBox.style.zIndex = -10;
-	getData();
-	window.location.reload();
-  });
-
-  // 飲み会データ登録
-  let registNomiBtn = document.getElementById('registBtn');
-  registNomiBtn.addEventListener('click', ()=> {
-	  console.log('call : registNomiData');
-	  drink = document.getElementById('drinkMobile').value;
-	  eat = document.getElementById('eatMobile').value;
-	  money = document.getElementById('moneyInput').value;
-	  console.log(drink +", "  + eat + ", " + money + "");
-	  getData();
-	  // window.location.reload();
-  });
+	});
  </script>
 </body>
 </html>
