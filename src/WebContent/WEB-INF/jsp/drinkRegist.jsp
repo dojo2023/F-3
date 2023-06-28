@@ -117,7 +117,7 @@
                 <td>
                     <button id="newFriendAddBtn" type="button" class="label-style fonts"
                         style="display: inline-block; text-align: center;">
-                        <span>Frined</span><br>
+                        <span>Friend</span><br>
                         <span>新規登録</span>
                     </button>
                 </td>
