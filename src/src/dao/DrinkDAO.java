@@ -1,6 +1,7 @@
 package dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,6 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import model.Drink;
+
 
 public class DrinkDAO {
 	public List<Drink> select(Drink param) {
@@ -20,7 +22,7 @@ public class DrinkDAO {
 			Class.forName("org.h2.Driver");
 
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/simpleBC", "sa", "");
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/DB/nomikaiDB", "sa", "");
 
 			// SQL文を準備する
 			String sql = "SELECT * FROM Drink WHERE NUMBER LIKE ? AND DRINK LIKE ? AND EAT LIKE ? AND ACCOUNT LIKE ? AND AGE LIKE ? AND GENDER LIKE ? AND REGISTDATE LIKE ? ORDER BY NUMBER";
@@ -39,8 +41,8 @@ public class DrinkDAO {
 			}
 			if (param.getEat() != 0) {
 				pStmt.setString(3, "%" + param.getEat() + "%");
-			} else {
-				pStmt.setString(3, "%");
+				} else {
+					pStmt.setString(3, "%");
 			}
 			if (param.getAccount() != 0) {
 				pStmt.setString(4, "%" + param.getAccount() + "%");
@@ -57,8 +59,8 @@ public class DrinkDAO {
 			} else {
 				pStmt.setString(6, "%");
 			}
-			if (param.getRegistDate() != null) {
-				pStmt.setString(7, "%" + param.getRegistDate() + "%");
+			if (param.getRegistData() != null) {
+				pStmt.setString(7, "%" + param.getRegistData() + "%");
 			} else {
 				pStmt.setString(7, "%");
 			}
@@ -75,7 +77,7 @@ public class DrinkDAO {
 						rs.getInt("ACCOUNT"),
 						rs.getInt("AGE"), // int型に修正
 						rs.getString("GENDER"),
-						rs.getDate("REGISTDATE") // date型に修正
+						rs.getDate("REGISTDATA") // date型に修正
 				);
 				cardList.add(drink);
 			}
@@ -114,9 +116,9 @@ public class DrinkDAO {
 			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/simpleBC", "sa", "");
 
 			// SQL文を準備する
-			String sql = "INSERT INTO Drink VALUES (?, ?, ?, ?, ?, ?, ?)";
-			// String sql = "insert into Drink values(?, ?, ?, ?, ?, ?)";
-			// 4:年齢, 5:性別, 6:登録日 -> 自動取得
+			String sql = "INSERT INTO nomiInfo (drink, eat, account, age, gender, registdata)\r\n"
+					+ "VALUES (?, ?, ?, (SELECT age FROM userInfo WHERE userID LIKE ?), (SELECT gender FROM userInfo WHERE userID LIKE ?), CURDATE());\r\n"
+					+ "";
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
@@ -152,10 +154,8 @@ public class DrinkDAO {
 			} else {
 				pStmt.setString(6, null);
 			}
-			if (card.getRegistDate() != null) {
-				//java.sql.Date sqlDate = new java.sql.Date(card.getRegistDate().getTime());
-				//Date sqlDate = new Date(card.getRegistDate().getTime());
-				pStmt.setDate(7, card.getRegistDate()); // date型に修正
+			if (card.getRegistData() != null) {
+				pStmt.setDate(7, card.getRegistData()); // date型に修正
 			} else {
 				pStmt.setDate(7, null); // date型に修正
 			}
@@ -233,9 +233,9 @@ public class DrinkDAO {
 			} else {
 				pStmt.setString(6, null);
 			}
-			if (card.getRegistDate() != null) {
-				java.sql.Date sqlDate = new java.sql.Date(card.getRegistDate().getTime());
-				pStmt.setDate(7, sqlDate); // date型に修正
+			if (card.getRegistData() != null) {
+				Date sqlNow = new Date(System.currentTimeMillis());
+				pStmt.setDate(7, sqlNow); // date型に修正
 			} else {
 				pStmt.setDate(7, null); // date型に修正
 			}
