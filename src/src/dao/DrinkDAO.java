@@ -104,7 +104,7 @@ public class DrinkDAO {
 	}
 
 	// 引数cardで指定されたレコードを登録し、成功したらtrueを返す
-	public boolean insert(Drink card) {
+	public boolean insert(Drink card,String Userid) {
 		Connection conn = null;
 		boolean result = false;
 
@@ -122,44 +122,32 @@ public class DrinkDAO {
 			PreparedStatement pStmt = conn.prepareStatement(sql);
 
 			// SQL文を完成させる
-			if (card.getNumber() != 0) {
-				pStmt.setInt(1, card.getNumber());
+			if (card.getDrink() != 0) {
+				pStmt.setInt(1, card.getDrink());
 			} else {
 				pStmt.setInt(1, 0);
 			}
 
-			if (card.getDrink() != 0) {
-				pStmt.setInt(2, card.getDrink());
+			if (card.getEat() != 0) {
+				pStmt.setInt(2, card.getEat());
 			} else {
 				pStmt.setInt(2, 0);
 			}
-
-			if (card.getEat() != 0) {
-				pStmt.setInt(3, card.getEat());
+			if (card.getAccount() != 0) {
+				pStmt.setInt(3, card.getAccount());
 			} else {
 				pStmt.setInt(3, 0);
 			}
-			if (card.getAccount() != 0) {
-				pStmt.setInt(4, card.getAccount());
+			if (!(Userid.equals(null))) {
+				pStmt.setString(4, Userid);
 			} else {
-				pStmt.setInt(4, 0);
+				pStmt.setString(4, null);
 			}
-			if (card.getAge() != 0) {
-				pStmt.setInt(5, card.getAge());
+			if (!(Userid.equals(null))) {
+				pStmt.setString(5, Userid);
 			} else {
-				pStmt.setInt(5, 0);
+				pStmt.setString(5, null);
 			}
-			if (card.getGender() != null && !card.getGender().equals("")) {
-				pStmt.setString(6, card.getGender());
-			} else {
-				pStmt.setString(6, null);
-			}
-			if (card.getRegistData() != null) {
-				pStmt.setDate(7, card.getRegistData()); // date型に修正
-			} else {
-				pStmt.setDate(7, null); // date型に修正
-			}
-
 			// SQL文を実行する
 			int rowCount = pStmt.executeUpdate();
 			if (rowCount == 1) {
@@ -194,7 +182,7 @@ public class DrinkDAO {
 			Class.forName("org.h2.Driver");
 
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/simpleBC", "sa", "");
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/DB/nomikaiDB", "sa", "");
 
 			// SQL文を準備する
 			String sql = "UPDATE Drink SET DRINK=?, EAT=?, ACCOUNT=?, AGE=?, GENDER=?, REGISTDATE=? WHERE NUMBER=?";
@@ -273,7 +261,7 @@ public class DrinkDAO {
 			Class.forName("org.h2.Driver");
 
 			// データベースに接続する
-			conn = DriverManager.getConnection("jdbc:h2:file:C:/pleiades/workspace/data/simpleBC", "sa", "");
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/DB/nomikaiDB", "sa", "");
 
 			// SQL文を準備する
 			String sql = "DELETE FROM Drink WHERE NUMBER=?";
