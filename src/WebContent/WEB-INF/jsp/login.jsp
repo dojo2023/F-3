@@ -32,7 +32,7 @@
           <br>
           <br>
           <br>
-          <button onclick="location.href='/nomikai/SignUpSevlet'">新規登録はこちら</button>
+          <a href="/nomikai/SignUpServlet" class="newText">～新規登録はこちら～</a>
         </div>
 
         <div class="b">
@@ -81,12 +81,12 @@
           </div>
           </form>
           <div class="okaikei">
-          <a href="/nomikai/PaymentServlet" class="btn2" class="v">お会計</a>
+          <a href="/nomikai/PaymentPreLoginServlet" class="btn2" class="v">お会計</a>
           </div>
           <br>
           <br>
           <br>
-          <a href="/nomikai/SignUpServlet">新規登録はこちら</a>
+          <a href="/nomikai/SignUpServlet" class="newTextSp">～新規登録はこちら～</a>
         </div>
     </div>
     </div>
@@ -94,6 +94,32 @@
 
  </div>
 </body>
+<style>
 
+.newText {
+		font-size: 25px;
+		border: 2px solid black;
+		background: rgba(256, 256, 256, 0.8);
+		text-decoration: none;
+		color: black;
+		padding: 10px 10px 10px 10px;
+}
+
+.newText:hover {
+	text-decoration: none;
+	color: white;
+	background: rgba(255, 165, 0, 0.9);
+}
+
+.newTextSp {
+		font-size: 15px;
+		border: 2px solid black;
+		background: rgba(256, 256, 256, 0.8);
+		text-decoration: none;
+		color: black;
+		padding: 10px 10px 10px 10px;
+}
+
+</style>
 </html>
 

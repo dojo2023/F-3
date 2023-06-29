@@ -16,7 +16,7 @@
 
     <main>
     	<form method="POST" name="shinki" action="/nomikai/SignUpServlet">
-			<table>
+			<table crass="tableWrapeer">
             	<tr style="white-space: nowrap">
                 	<td class="td-style"><label class="label-style" >ID</label></td>
                 	<td class="td-style"><input class="label-style2" type="text" id="newID" name="newID" placeholder="30文字以内"></td>
