@@ -62,31 +62,34 @@ const getData = () => {
   request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?jsonget=dsfhjv4we8r321Hgscv', true);
   request.send();
 };
-/*
+
 const sendData = () => {
   let request = new XMLHttpRequest();
 
   request.onreadystatechange = function() {
     if (request.readyState === XMLHttpRequest.DONE) {
       if (request.status === 200) {
-        //data = JSON.parse(request.responseText); // 取得したデータをdataに格納
-        //processData(data);
-        //checkData(); // データの確認
-        //displayData(data); // データを表示
+        data = JSON.parse(request.responseText); // 取得したデータをdataに格納
+        processData(data);
+        checkData(); // データの確認
+        displayData(data); // データを表示
       } else {
         console.error('Request failed. Status:', request.status);
       }
     }
   };
 
-  let num_value=1;
-  let eat_value=3;
-  let drink_value=3;
-  let account_value=1000;
-  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&eat=' + eat_value + '&drink=' + drink_value + '&account=' + account_value, true);
-//  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&del=true',true);//削除
+let num_value = document.getElementById('number').value;
+let eat_value = document.getElementById('eat').value;
+let drink_value = document.getElementById('drink').value;
+let account = document.getElementById('account').value;
+  let url = 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&eat=' + eat_value + '&drink=2&account=2000';
+//  let url= 'http://localhost:8080/nomikai/DrinkServlet?number=2';
+  console.log("url:" + url);
+  request.open('GET', url, true);//編集
+  request.open('GET', 'http://localhost:8080/nomikai/DrinkServlet?number=' + num_value + '&del=true',true);//削除
 };
-*/
+
 
 
 const processData = (data) => {
@@ -127,9 +130,7 @@ function displayData() {
         heading.textContent = "御会計表";
         invoiceDiv.appendChild(heading);
 
-        const form = document.createElement("form");
-        form.action = "#";
-        form.method = "post";
+        const form = document.createElement("div");
 
         // 各データ項目ごとに<div>要素を作成
         for (const key in item) {
@@ -177,7 +178,7 @@ function displayData() {
 });
 
 function enableInputsAndUpdateButton(event) {
-  const form = this.closest("form");
+  const form = this.closest("li");
   const inputs = form.querySelectorAll("input");
 
   inputs.forEach((input) => {
@@ -186,8 +187,12 @@ function enableInputsAndUpdateButton(event) {
 
   this.textContent = "更新"; // ボタンのテキストを「編集」から「更新」に変更
   this.removeEventListener("click", enableInputsAndUpdateButton); // クリックイベントのリスナーを削除
-  form.addEventListener("submit", disableInputsAndRestoreButton); // submitイベントのリスナーを追加
-  event.preventDefault(); // ボタンのデフォルトのsubmit動作をキャンセル
+  form.addEventListener("click", disableInputsAndRestoreButton); // submitイベントのリスナーを追加
+  sendData();//編集中
+  sendParam2();
+  //event.preventDefault(); // ボタンのデフォルトのsubmit動作をキャンセル
+
+
 }
 
 function disableInputsAndRestoreButton(event) {
@@ -292,7 +297,31 @@ new Splide('.splide', {
 	keyboard: true,
 }).mount();
 
+
 }
+
+function sendParam2() {
+  let num_value = document.getElementById('number').value;
+  let eat_value = document.getElementById('eat').value;
+  let drink_value = document.getElementById('drink').value;
+  let account_value = document.getElementById('account').value;
+
+  $.ajax({
+    type: 'GET',
+    url: 'http://localhost:8080/nomikai/updateData',
+    data: {
+      "number": num_value,
+      "eat": eat_value,
+      "drink": drink_value,
+      "account": account_value
+    }
+  }).done(function(data) {
+    console.log(data);
+  }).fail(function(XMLHttpRequest, textStatus, errorThrown) {
+    alert(errorThrown);
+  });
+}
+
 
 // ページ読み込み時にデータを表示
 window.addEventListener("load", displayData);

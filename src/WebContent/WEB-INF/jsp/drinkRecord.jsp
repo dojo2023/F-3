@@ -6,6 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>title</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="/nomikai/css/drinkRecord.css">
 	    <link rel="stylesheet" type="text/css" href="css/common.css">
 </head>

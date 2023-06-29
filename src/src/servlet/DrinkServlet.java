@@ -6,7 +6,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
@@ -15,7 +14,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import org.json.JSONObject;
 
@@ -40,8 +38,10 @@ public class DrinkServlet extends HttpServlet {
 			String account= request.getParameter("account");
 			String secret_code= "dsfhjv4we8r321Hgscv";
 
-			System.out.println("data1:"+json_enable);
-			System.out.println("data2:"+secret_code);
+			System.out.println("number:"+number);
+			System.out.println("eat:"+eat);
+			System.out.println("drink:"+drink);
+			System.out.println("account:"+account);
 			json_enable.equals(secret_code);
 			if( !(json_enable.equals(secret_code)) ){
 				throw new RuntimeException("Not Match SecretCode.!!");
@@ -54,9 +54,12 @@ public class DrinkServlet extends HttpServlet {
 			Connection con = DriverManager.getConnection(url, "sa", "");
 			//テーブルから全件抽出
 			String sql= "SELECT * from NOMIINFO";
+			String sql2 = "select count(*) as sum from NOMIINFO";
 			PreparedStatement stmt = con.prepareStatement(sql);
+			PreparedStatement stmt2 = con.prepareStatement(sql2);
 			//DBに対しQuery実行。rsに実行結果を蓄積
 			ResultSet rs = stmt.executeQuery();
+			ResultSet rs2 = stmt2.executeQuery();
 		    //httpヘッダー送信の登録
 			response.setContentType("application/json");
 			response.setHeader("Cache-Control", "nocache");
@@ -66,7 +69,9 @@ public class DrinkServlet extends HttpServlet {
 			//１レコード単位でカンマ設置の判定用カウンター
 			int loop_cnt=0;
 			//Queryの実行結果行数の取得のために定義
-			ResultSetMetaData rsmd = rs.getMetaData();
+			//ResultSetMetaData rsmd = rs.getMetaData();
+			rs2.last();
+			int num = rs2.getInt("sum");
 			//JSON配列形式のケース開始ブラケット
 			out.println("[");
 			while (rs.next()) {
@@ -78,7 +83,7 @@ public class DrinkServlet extends HttpServlet {
 				//1レコード分をまとめてネットストリームへ書き込む
 				out.print(json);
 				//行数取得してレコード最終行のみカンマを外す判定処理
-				if( loop_cnt < rsmd.getColumnCount()-1) {
+				if( loop_cnt < num-1) {
 					out.println(",");
 				}else {
 					out.println("");
@@ -110,31 +115,61 @@ public class DrinkServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// もしもログインしていなかったらログインサーブレットにリダイレクトする
-		HttpSession session = request.getSession();
-		if (session.getAttribute("id") == null) {
-			response.sendRedirect("/nomikai/jsp/drinkRecord.jsp");
-			return;
-		}
 
 		// リクエストパラメータを取得する
 		request.setCharacterEncoding("UTF-8");
-		Integer number = Integer.parseInt(request.getParameter("NUMBER"));
-		Integer drink = Integer.parseInt(request.getParameter("DRINK"));
-		Integer eat = Integer.parseInt(request.getParameter("EAT"));
-		Integer account = Integer.parseInt(request.getParameter("ACCOUNT"));
-		// 検索処理を行う
+		String numberStr = request.getParameter("NUMBER");
+		String drinkStr = request.getParameter("DRINK");
+		String eatStr = request.getParameter("EAT");
+		String accountStr = request.getParameter("ACCOUNT");
+
+		Integer number = null;
+		Integer drink = null;
+		Integer eat = null;
+		Integer account = null;
+
+		if (numberStr != null) {
+		    try {
+		        number = Integer.parseInt(numberStr);
+		    } catch (NumberFormatException e) {
+		        // エラーハンドリング
+		    }
+		}
+
+		if (drinkStr != null) {
+		    try {
+		        drink = Integer.parseInt(drinkStr);
+		    } catch (NumberFormatException e) {
+		        // エラーハンドリング
+		    }
+		}
+
+		if (eatStr != null) {
+		    try {
+		        eat = Integer.parseInt(eatStr);
+		    } catch (NumberFormatException e) {
+		        // エラーハンドリング
+		    }
+		}
+
+		if (accountStr != null) {
+		    try {
+		        account = Integer.parseInt(accountStr);
+		    } catch (NumberFormatException e) {
+		        // エラーハンドリング
+		    }
+		}
+
 		DrinkDAO dDao = new DrinkDAO();
 
-		// = dDao.select(new Drink(number, drink, eat, account));
 
-		// 検索結果をリクエストスコープに格納する
-		//request.setAttribute("cardList", cardList);
 
 		// 結果ページにフォワードする
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/drinkRecord.jsp");
 		dispatcher.forward(request, response);
 	}
+
 }
 
