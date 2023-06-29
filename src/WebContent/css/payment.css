@@ -351,8 +351,8 @@ body {
 		background: rgba(256, 256, 256, 0.9);
 		color: black;
 		position: absolute;
-		right: 50px;
-		bottom: 50px;
+		right: 10px;
+		bottom: 0px;
 	}
 
 .rouletteWrapper {
