@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -107,7 +107,18 @@
 
 </div>
 
+<input id="alert" type="hidden" value="${alert}">
+
 </body>
 <script type="text/javascript" src="/nomikai/js/menu.js"></script>
 <script type="text/javascript" src="/nomikai/js/demo.js"></script>
+<script>
+let mitani = document.getElementById('alert').value;
+window.addEventListener('load', (event)=> {
+	if((mitani != null) && (mitani != "")){
+		alert(mitani);
+	}
+})
+
+</script>
 </html>

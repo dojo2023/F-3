@@ -1,4 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<% int number = (int)application.getAttribute("number"); %>
+<% String userid = (String)application.getAttribute("userid"); %>
+<% String userpw = (String)application.getAttribute("userpw"); %>
+<% int max = (int)application.getAttribute("max"); %>
+<% int age = (int)application.getAttribute("age"); %>
+<% String gender = (String)application.getAttribute("gender"); %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,33 +16,40 @@
 </head>
 
 <body>
+	<input id="prenumder" type="hidden" value="<%=number %>">
+	<input id="preid" type="hidden" value="<%=userid %>">
+	<input id="prepw" type="hidden" value="<%=userpw %>">
+	<input id="premax" type="hidden" value="<%=max %>">
+   	<input id="preage" type="hidden" value="<%= age %>">
+   	<input id="pregender" type="hidden" value="<%=gender %>">
     <header>
 
     </header>
 
     <main>
     	<form method="POST" action="/nomikai/EditServlet">
+    	<input id="number" type="hidden" value=<%= number %> name="changeNumber">
         	<div>
             	<p class="img-style1"><img class="img-style1-1" src="/nomikai/img/object/manaita.png"></p>
             	<p class="p-style">ID</p>
-            	<p class="input-style1"><input class="input-style1-1" type="text" name="changeID" placeholder="新規ID" readonly></p>
+            	<p class="input-style1"><input id="id" class="input-style1-1" type="text" name="changeID" placeholder="新規ID" value="${id}" readonly></p>
             	<p class="p-style2">パスワード</p>
-            	<p class="input-style2"><input class="input-style2-1" type="password" name="changePW" placeholder="新規PW"></p>
+            	<p class="input-style2"><input id="pw" class="input-style2-1" type="password" name="changePW" placeholder="新規PW"></p>
         	</div>
         	<div>
             	<p class="img-style2"><img class="img-style2-1" src="/nomikai/img/object/manaita.png"></p>
             	<p class="p-style3">上限金額</p>
-            	<p class="input-style3"><input class="input-style3-1" type="number" name="changeMax"></p>
+            	<p class="input-style3"><input id="max" class="input-style3-1" type="number" name="changeMax"></p>
             	<p class="p-style4">円</p>
         	</div>
         	<div>
             	<p class="img-style3"><img class="img-style3-1" src="/nomikai/img/object/manaita.png"></p>
             	<p class="p-style5">年齢</p>
-            	<p class="input-style4"><input class="input-style4-1" type="number" name="changeAge"></p>
+            	<p class="input-style4"><input id="age" class="input-style4-1" type="number" name="changeAge"></p>
             	<p class="p-style6">歳</p>
         	</div>
         	<div>
-            	<p class="img-style4"><img class="img-style4-1" src="/nomikai/img/object/manaita.png"></p>
+            	<p class="img-style4"><img id="gender" class="img-style4-1" src="/nomikai/img/object/manaita.png"></p>
             	<p class="p-style7">男性　女性　その他</p>
         	</div>
         	<div>
@@ -62,7 +76,7 @@
         	</div>
         	<div>
                 <p class="img-style7"><img class="img-style7-1" src="/nomikai/img/object/oil2.png"></p>
-                <input id="kousin" type="submit" style= "border: none;" class="p-style10" value="更新">
+                <input id="kousin" type="button" style= "background-color: transparent; border: none;" class="p-style10" value="更新">
                 <!-- <button id="kousin" type="button" style= "background-color: transparent; border: none;" class="p-style10">更新</button> -->
         	</div>
         </form>
@@ -79,13 +93,39 @@
     </ul>
 </footer>
     <script>
-    // 指定したidをgetElementByIdで取得 letで宣言したtourokuに代入
+      let number = document.getElementById('number');
+      let pw = document.getElementById('pw');
+      let max = document.getElementById('max');
+      let age = document.getElementById('age');
+      let gender = document.getElementById('gender');
+
       let kousin = document.getElementById('kousin');
-    // clickされたときにどのように動作するかの処理
-      kousin.addEventListener('click', function(){
-    			document.shinki.method="POST";
-    			document.shinki.submit();
+      kousin.addEventListener('click', ()=>{
+    	  if(number.value === ""){
+    		  number.value = document.getElementById('prenumber').value;
+    	  }
+    	  if (pw.value === "") {
+    		  pw.style.color = "white";
+    		  pw.value = document.getElementById('prepw').value;
+    	  }
+    	  if (max.value === "") {
+    		  max.style.color = "white";
+    		  max.value = document.getElementById('premax').value;
+    	  }
+    	  if (age.value === "") {
+    		  age.style.color = "white";
+    		  age.value = document.getElementById('preage').value;
+    	  }
+    	  console.log('call submit');
+    	  kousin.type="submit";
       });
     </script>
 </body>
+
+
+
+
+
+
+
 </html>

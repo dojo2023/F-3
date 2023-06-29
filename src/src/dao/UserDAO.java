@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import model.User;
 
@@ -71,6 +73,63 @@ public class UserDAO {
 
 		// 結果を返す
 		return loginResult;
+	}
+
+	// ユーザ情報全部返す
+	public List<User> userInfo(String id) {
+		Connection conn = null;
+		List<User> cardList = new ArrayList<User>();
+
+		try {
+			// JDBCドライバを読み込む
+			Class.forName("org.h2.Driver");
+
+			// データベースに接続する
+			conn = DriverManager.getConnection("jdbc:h2:file:C:/dojo6/DB/nomikaiDB", "sa", "");
+
+			// SELECT文を準備する
+						// ? は値を差し込む場所
+			String sql = "select * from USERINFO where userID = ?";
+						// SQLインジェクションを防ぐ
+			PreparedStatement pStmt = conn.prepareStatement(sql);
+						// ここで？に差し込む
+		   pStmt.setString(1,id);
+						//pStmt.setString(2,pw);
+
+						// SELECT文を実行し、結果表を取得する
+		   ResultSet rs = pStmt.executeQuery();
+
+		   while (rs.next()) {
+				User card = new User(
+				rs.getInt("NUMBER"),
+				rs.getString("userid"),
+				rs.getString("userpw"),
+				rs.getInt("max"),
+				rs.getInt("age"),
+				rs.getString("gender")
+				);
+				cardList.add(card);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
+		finally {
+			// データベースを切断
+			if (conn != null) {
+				try {
+					conn.close();
+				}
+				catch (SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+		// 結果を返す
+		return cardList;
 	}
 
 	public boolean insertSinki(User newinfo) {
@@ -150,6 +209,7 @@ public class UserDAO {
 
 			// SQL文を実行する
 			if (pStmt.executeUpdate() == 1) {
+				System.out.println("update success!");
 				result = true;
 			}
 

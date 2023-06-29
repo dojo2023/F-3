@@ -3,6 +3,7 @@ package servlet;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import dao.UserDAO;
+import model.User;
 
 /**
  * Servlet implementation class LoginServlet
@@ -74,6 +76,15 @@ public class LoginServlet extends HttpServlet {
 			// 全てのページからIDを参照するため、アプリケーションスコープに格納
 			ServletContext application = this.getServletContext();
 			application.setAttribute("id", id);
+			UserDAO user = new UserDAO();
+			List<User> list = user.userInfo(id);
+			application.setAttribute("number", list.get(0).getNumber());
+			application.setAttribute("userid", list.get(0).getUserid());
+			application.setAttribute("userpw", pw);
+			application.setAttribute("max", list.get(0).getMax());
+			application.setAttribute("age", list.get(0).getAge());
+			application.setAttribute("gender", list.get(0).getGender());
+			// application.setAttribute("list", list);
 
 			// メニューサーブレットにリダイレクトする
 			response.sendRedirect("/nomikai/MenuServlet");

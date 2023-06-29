@@ -27,6 +27,15 @@ public User(String userid, String userpw, int max, int age, String gender) {
 	this.gender = gender;
 }
 
+public User(int number, String userpw, int max, int age, String gender) {
+	super();
+	this.number = number;
+	this.userpw = userpw;
+	this.max = max;
+	this.age = age;
+	this.gender = gender;
+}
+
 public User() {
 	super();
 	this.number = 0;

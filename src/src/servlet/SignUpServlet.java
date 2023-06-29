@@ -1,6 +1,8 @@
 package servlet;
 
 import java.io.IOException;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -41,11 +43,32 @@ public class SignUpServlet extends HttpServlet {
 		int newmax = Integer.parseInt(request.getParameter("newMax"));
 		int newage = Integer.parseInt(request.getParameter("newAge")) ;
 		String gender = request.getParameter("gender");
+		String newgo1 = "";
+		//String go = getParameter("****");
+		//goはDBからもってきたハッシュ化されたpw比較するpwになります。
+
+		try {
+			MessageDigest md5 = MessageDigest.getInstance("MD5");
+			byte[] result = md5.digest(newpw.getBytes());
+			int[] i = new int[result.length];
+			StringBuffer sb = new StringBuffer();
+			for (int j = 0; j < result.length; j++) {
+				i[j] = result[j] & 0xff;
+				if (i[j] <= 15) {
+					sb.append("0");
+				}
+				sb.append(Integer.toHexString(i[j]));
+			}
+			newgo1 = sb.toString(); // これをサーバに渡す
+		} catch (NoSuchAlgorithmException x) {
+			System.out.println("error with md5");
+		}
+		System.out.println("newgo1:" + newgo1);
 
 
         // データベースに登録する
         UserDAO dao = new UserDAO();
-        boolean result = dao.insertSinki(new User(newid, newpw, newmax, newage, gender));
+        boolean result = dao.insertSinki(new User(newid, newgo1, newmax, newage, gender));
 
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/login.jsp");
 		dispatcher.forward(request, response);
