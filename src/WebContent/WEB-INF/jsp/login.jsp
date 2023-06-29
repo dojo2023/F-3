@@ -50,7 +50,7 @@
       <!--   <a href="#" class="btn" style="margin-right: 20px;">入店する</a> -->
       <button class="btn" style="margin-right: 20px; border: none;">入店する</button>
           </form>
-          <a href="/nomikai/PaymentServlet" class="btn">お会計</a>
+          <a href="/nomikai/PaymentPreLoginServlet" class="btn">お会計</a>
         </div>
       </div>
 
@@ -86,7 +86,7 @@
           <br>
           <br>
           <br>
-          <button onclick="location.href='/nomikai/SignUpServlet'">新規登録はこちら</button>
+          <a href="/nomikai/SignUpServlet">新規登録はこちら</a>
         </div>
     </div>
     </div>
