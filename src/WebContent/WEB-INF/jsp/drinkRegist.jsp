@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.css">
     <link rel="stylesheet" href="/nomikai/css/drinkRegist.css">
+	<link rel="stylesheet" href="/nomikai/css/common.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.3.2/swiper-bundle.min.js"></script>
 
     <style>
@@ -302,6 +303,21 @@
         <button id="registBtn" type="button" class="fonts label-style"
             style="margin: auto; display: block; height: 40px; width: 100px;">登録</button>
     </form>
+
+<a href="/nomikai/jsp/warning.jsp" style="text-decoration: none; color:white; border: 2px solid white; padding: 1em 10px 1em 10px; font-weight:bold;">限度額を超えた</a><!-- 発表用 -->
+
+<footer>
+
+    <ul class="menu">
+        <li class="menuBar">
+            <a href="/nomikai/DrinkRegistServlet" class="menuText">&#127867;飲み会登録</a>
+            <a href="/nomikai/DrinkServlet" class="menuText">&#129534;データ閲覧</a><br>
+            <hr>
+            <a href="/nomikai/FriendsRecordServlet" class="menuText">&#129309;呑み友一覧</a>
+            <a href="/nomikai/EditServlet" class="menuText">&#9881;&#65039;設定</a>
+        </li>
+    </ul>
+</footer>
 
     <input id="userID" type="hidden" value=<%= id %>> <!-- ログインしているユーザのID取得 -->
 
