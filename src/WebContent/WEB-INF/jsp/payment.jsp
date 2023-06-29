@@ -13,26 +13,23 @@
         <div class="payment-box">
             <button type="button" id="warikan" class="paySelect" onClick="divide()">・割り勘</button>
             <button type="button" id="ogori" class="paySelect" onclick="classChange()">・おごり</button>
-            <div>
-                <span style="text-align: left;">金額 : </span><input class="input-style fonts" type="number" id="account" min="0" max="1000000" value="20000"><span>円</span>
+            <div class="paymentForm">
+                <span style="text-align: left; font-size: 40px;">金額 </span><input class="input-style fonts" type="number" id="account" min="0" max="1000000" value="20000"><span>円</span><br>
+                <span style="text-align: left; font-size: 40px;">人数</span><input class="input-style fonts" type="number" id="numOp" value="5"><span>人</span>
             </div>
             <div>
-                <span style="text-align: left;">人数 : </span><input class="input-style fonts" type="number" id="numOp" value="5"><span>人</span>
-            </div>
-            <div>
-                <span style="position: absolute; left: 5%; bottom: -10%; font-size: 35px;">一人当たり : </span><span id="result"></span>
+                <p class="per1Text">一人当たり  </p><span id="result"></span>
             </div>
         </div>
     </form>
 
 	<a href="/nomikai/MenuServlet" id="backButton">戻る</a>
 
-
 <div class="rouletteNon" id="target"> <!-- ルーレット画面全体 -->
     <div class="outlineStyle"> <!-- 外枠 -->
         <div id="arrow" class="arrow-clippath"></div> <!-- 矢印 -->
         <div id="roulette" class="shape"></div> <!-- ルーレット本体 -->
-    </div>
+	</div>
 
     <div style="text-align: center; margin-top: 20px;">
         <select id="hcSelect" name="example">
@@ -46,9 +43,10 @@
             <option value="8">8</option>
         </select>
     </div>
+
     <button id="rltStart" type="button" class="btnStyle1">ルーレットスタート</button>
     <button id="rotateStart" type="button" style="opacity: 0;"></button>
-    <button id="return" type="button" class="btnStyle2" onclick="classChange2()">↩ 戻る</button>
+    <button id="return" type="button" class="btnStyle2" onclick="classChange2()">終わる</button>
 
     <table border="1" class="nameTable">
     	<tr>
@@ -107,6 +105,7 @@
 	}
 
 </script>
+
 <script>
 //奢り機能
         // ルーレットの色の配列
